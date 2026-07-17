@@ -25,7 +25,7 @@ git push -u origin main
 4. Selecione o repositório e a branch `main`
 5. Em **Build Settings**:
    - **Dockerfile**: `Dockerfile`
-   - **Porta Interna**: `5000`
+   - **Porta Interna**: `5010`
 6. Defina domínio/subdomínio se desejar
 7. Clique em **Deploy**
 
