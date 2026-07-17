@@ -1,0 +1,1642 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M6G29MB5');
+  </script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buffet de Mini-Hamburguer para Eventos | Firebull</title>
+  <meta name="description" content="Leve a Firebull para seu evento com mini-hambúrgueres artesanais, batatas crocantes, salgados, equipe treinada e 4 horas de buffet completo.">
+  <meta property="og:title" content="Faça um evento inesquecível com a Firebull">
+  <meta property="og:description" content="Mini-hambúrgueres artesanais preparados na hora e uma operação completa para eventos de todos os tamanhos.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ url_for('static', filename='img/hero pc.png') }}">
+  <meta name="theme-color" content="#080706">
+  <link rel="icon" href="{{ url_for('static', filename='img/firebull-logo.png') }}">
+  <script src="/static/tracking.js" defer></script>
+  <style>
+    :root {
+      --black: #080706;
+      --coal: #11100d;
+      --ink: #1c1712;
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #fff8e8;
+      --muted: rgba(255, 248, 232, 0.72);
+      --yellow: #f4b21b;
+      --yellow-strong: #ffbd19;
+      --cream: #fff2c8;
+      --paper: #f7efe0;
+      --ember: #d6461f;
+      --shadow: 0 16px 44px rgba(0, 0, 0, 0.3);
+      --radius: 8px;
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img, picture { display: block; max-width: 100%; }
+
+    a { color: inherit; }
+
+    button, input, select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .section {
+      position: relative;
+      padding: clamp(70px, 9vw, 118px) 0;
+      overflow: hidden;
+    }
+
+    .section-dark {
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0)),
+        var(--black);
+    }
+
+    .section-coal { background: var(--coal); }
+
+    .section-yellow {
+      background:
+        linear-gradient(135deg, rgba(255, 210, 85, 0.95), rgba(244, 178, 27, 0.92)),
+        var(--yellow);
+      color: #120d06;
+    }
+
+    .section-yellow .eyebrow,
+    .section-yellow .section-title,
+    .section-yellow .section-title span {
+      color: #120d06;
+    }
+
+    .section-yellow .section-lead {
+      color: rgba(18, 13, 6, 0.74);
+    }
+
+    .section-paper {
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 16px;
+      color: var(--yellow);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(1.85rem, 4vw, 4rem);
+      line-height: 1.02;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-wrap: balance;
+    }
+
+    .section-title span,
+    .hero-title span {
+      color: var(--yellow);
+    }
+
+    .hero-title span {
+      display: block;
+    }
+
+    .hero-title .hero-line {
+      color: var(--text);
+    }
+
+    .hero-title .hero-brand {
+      color: var(--yellow);
+    }
+
+    .section-lead {
+      max-width: 720px;
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 1.6vw, 1.28rem);
+      text-wrap: pretty;
+    }
+
+    .section-paper .section-lead {
+      color: rgba(28, 23, 18, 0.72);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-height: 50px;
+      gap: 10px;
+      padding: 0 24px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ffc84a 0%, var(--yellow) 58%, #df9b08 100%);
+      color: #120d06;
+      font-size: 0.82rem;
+      font-weight: 950;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+      box-shadow: 0 16px 34px rgba(244, 178, 27, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.34);
+      white-space: normal;
+      text-align: center;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow: 0 18px 34px rgba(244, 178, 27, 0.34);
+      text-decoration: none;
+    }
+
+    .button::after {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-top: 2px solid currentColor;
+      border-right: 2px solid currentColor;
+      transform: rotate(45deg);
+      transition: transform 180ms ease;
+      flex: 0 0 auto;
+    }
+
+    .button:hover::after {
+      transform: translateX(3px) rotate(45deg);
+    }
+
+    .button-dark {
+      background: rgba(8, 7, 6, 0.58);
+      color: var(--text);
+      box-shadow: inset 0 0 0 1px rgba(244, 178, 27, 0.22);
+      border: 1px solid rgba(244, 178, 27, 0.32);
+    }
+
+    .button-dark:hover {
+      background: rgba(244, 178, 27, 0.12);
+      box-shadow: inset 0 0 0 1px rgba(244, 178, 27, 0.42);
+    }
+
+    .button-primary {
+      background: linear-gradient(180deg, #ffd15b 0%, var(--yellow) 62%, #df9b08 100%);
+      color: #120d06;
+      box-shadow: 0 16px 34px rgba(244, 178, 27, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.34);
+    }
+
+    .button-primary:hover { filter: brightness(1.06); }
+
+    .section-cta {
+      display: inline-flex;
+      margin-top: 24px;
+      background: #120d06;
+      color: var(--yellow);
+      border-color: rgba(18, 13, 6, 0.24);
+      box-shadow: 0 14px 30px rgba(18, 13, 6, 0.18);
+    }
+
+    .buffet-cta-row {
+      display: flex;
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .buffet-cta-row .section-cta {
+      margin-top: 0;
+    }
+
+    .hero {
+      min-height: max(840px, 100svh);
+      height: auto;
+      position: relative;
+      display: grid;
+      grid-template-rows: auto minmax(0, 1fr) auto;
+      align-items: stretch;
+      isolation: isolate;
+      overflow: hidden;
+      background: var(--black);
+    }
+
+    .hero-media,
+    .hero-media img,
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-media img {
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-overlay {
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(8, 7, 6, 0.76) 0%, rgba(8, 7, 6, 0.48) 35%, rgba(8, 7, 6, 0.08) 70%, rgba(8, 7, 6, 0.18) 100%),
+        linear-gradient(180deg, rgba(8, 7, 6, 0.08), rgba(8, 7, 6, 0.48));
+    }
+
+    .hero-media { z-index: -2; }
+
+    .hero-nav {
+      position: relative;
+      z-index: 3;
+      width: min(1360px, calc(100% - 40px));
+      margin: 0 auto;
+      padding-top: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 950;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .brand img {
+      width: 150px;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(1360px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: clamp(48px, 7vw, 86px) 0 clamp(34px, 5vw, 58px);
+      display: grid;
+      align-content: center;
+      min-height: 0;
+    }
+
+    .hero-copy {
+      max-width: 690px;
+    }
+
+    .hero-title {
+      margin: 0;
+      font-size: clamp(2.35rem, 4.05vw, 4.18rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-wrap: balance;
+      overflow-wrap: break-word;
+      text-shadow: 0 12px 32px rgba(0, 0, 0, 0.42);
+    }
+
+    .hero-subtitle {
+      max-width: 540px;
+      margin: 18px 0 0;
+      color: rgba(255, 248, 232, 0.84);
+      font-size: clamp(0.96rem, 1.35vw, 1.12rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 660px;
+      margin-top: 24px;
+    }
+
+    .stat {
+      min-height: 78px;
+      padding: 13px 15px;
+      border: 1px solid rgba(244, 178, 27, 0.16);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(244, 178, 27, 0.1), rgba(8, 7, 6, 0.28));
+      backdrop-filter: blur(10px);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--yellow);
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    .stat span {
+      display: block;
+      margin-top: 6px;
+      color: rgba(255, 248, 232, 0.76);
+      font-size: 0.82rem;
+      line-height: 1.35;
+    }
+
+    .marquee {
+      background: var(--yellow);
+      color: #120d06;
+      overflow: hidden;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 26s linear infinite;
+    }
+
+    .marquee span {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      min-height: 52px;
+      padding: 0 24px;
+      font-size: 0.82rem;
+      font-weight: 950;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .marquee svg {
+      width: 24px;
+      height: 18px;
+      color: #120d06;
+      flex: 0 0 auto;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+      gap: clamp(32px, 5vw, 76px);
+      align-items: center;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .feature-card,
+    .buffet-card,
+    .faq-item,
+    .review-card {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .feature-card {
+      padding: 20px 18px 20px 0;
+      min-height: auto;
+      background: transparent;
+      border-width: 0 0 0 2px;
+      border-color: rgba(244, 178, 27, 0.55);
+      padding-left: 20px;
+    }
+
+    .feature-icon {
+      width: 38px;
+      height: 38px;
+      margin-bottom: 18px;
+      color: var(--yellow);
+    }
+
+    .feature-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .feature-card h3,
+    .buffet-card h3 {
+      margin: 0;
+      color: var(--text);
+      font-size: 1.05rem;
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    .feature-card p,
+    .buffet-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .media-panel {
+      position: relative;
+      min-height: 360px;
+      width: min(100%, 470px);
+      justify-self: end;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .media-panel img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+    }
+
+    #operacao .split {
+      grid-template-columns: minmax(0, 0.95fr) minmax(300px, 0.72fr);
+      gap: clamp(32px, 4vw, 58px);
+    }
+
+    #operacao .section-title {
+      max-width: 520px;
+      font-size: clamp(1.85rem, 2.85vw, 3rem);
+      line-height: 1.04;
+    }
+
+    #operacao .section-lead {
+      max-width: 520px;
+      font-size: clamp(0.98rem, 1.25vw, 1.12rem);
+    }
+
+    .media-caption {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+      padding: 16px;
+      border-radius: var(--radius);
+      background: rgba(8, 7, 6, 0.76);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .media-caption strong {
+      display: block;
+      color: var(--yellow);
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .media-caption span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .buffet-showcase {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 38px;
+    }
+
+    .buffet-summary {
+      position: relative;
+      min-height: 100%;
+      padding: clamp(24px, 4vw, 38px);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)),
+        var(--black);
+      color: var(--text);
+      overflow: hidden;
+      box-shadow: 0 18px 42px rgba(18, 13, 6, 0.28);
+    }
+
+    .buffet-summary::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 46%;
+      height: 100%;
+      background: repeating-linear-gradient(135deg, rgba(244, 178, 27, 0.18) 0 8px, transparent 8px 18px);
+      clip-path: polygon(38% 0, 100% 0, 100% 100%, 0 100%);
+      pointer-events: none;
+    }
+
+    .buffet-badge {
+      position: relative;
+      display: inline-flex;
+      margin-bottom: 22px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: #120d06;
+      font-size: 0.78rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .buffet-summary h3 {
+      position: relative;
+      max-width: 440px;
+      margin: 0;
+      font-size: clamp(1.65rem, 3vw, 2.9rem);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .buffet-summary p {
+      position: relative;
+      max-width: 430px;
+      margin: 16px 0 0;
+      color: rgba(255, 248, 232, 0.72);
+      font-size: 1rem;
+    }
+
+    .menu-pills {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .menu-pills span {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(244, 178, 27, 0.14);
+      border: 1px solid rgba(244, 178, 27, 0.24);
+      color: var(--cream);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .buffet-list {
+      display: grid;
+      align-content: start;
+      gap: 12px;
+    }
+
+    .buffet-card {
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+      min-height: auto;
+      padding: 20px;
+      background: linear-gradient(90deg, rgba(8, 7, 6, 0.94), rgba(22, 17, 10, 0.9));
+      box-shadow: 0 12px 28px rgba(18, 13, 6, 0.18);
+    }
+
+    .buffet-card:nth-child(2) { margin-left: 26px; }
+    .buffet-card:nth-child(3) { margin-left: 52px; }
+
+    .buffet-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--yellow);
+      color: #120d06;
+      font-size: 0.95rem;
+      font-weight: 950;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38);
+    }
+
+    #eventos .section-title {
+      max-width: 700px;
+      font-size: clamp(1.75rem, 2.65vw, 2.75rem);
+      line-height: 1.04;
+    }
+
+    #eventos .section-lead {
+      max-width: 620px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: minmax(390px, 1.08fr) repeat(2, minmax(250px, 0.8fr));
+      grid-auto-rows: 230px;
+      align-items: stretch;
+      gap: 0;
+      width: min(100%, 1120px);
+      margin-top: 28px;
+      margin-inline: 0;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      background: var(--black);
+      box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+    }
+
+    .gallery-item {
+      position: relative;
+      margin: 0;
+      min-height: 0;
+      height: auto;
+      overflow: hidden;
+      border-radius: 0;
+      border: 0;
+      background: var(--coal);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+    }
+
+    .gallery-item.featured { grid-row: span 2; }
+    .gallery-item.wide { grid-column: span 1; }
+    .gallery-item.panorama { grid-column: span 2; }
+    .gallery-item.lift { transform: none; }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 420ms ease;
+    }
+
+    .gallery-item:hover img { transform: scale(1.035); }
+
+    .gallery-label {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      max-width: calc(100% - 24px);
+      padding: 7px 9px;
+      border-radius: 6px;
+      background: rgba(8, 7, 6, 0.78);
+      color: var(--text);
+      font-size: 0.78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .quote-band {
+      min-height: 620px;
+      display: grid;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(8, 7, 6, 0.94), rgba(8, 7, 6, 0.66) 54%, rgba(8, 7, 6, 0.28)),
+        url("{{ url_for('static', filename='img/event-service.jpg') }}") center / cover no-repeat;
+    }
+
+    .quote-band .section-title {
+      max-width: 890px;
+    }
+
+    .proof-layout {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: clamp(26px, 5vw, 64px);
+      align-items: center;
+      margin-top: 34px;
+    }
+
+    .proof-photo {
+      min-height: 330px;
+      border-radius: var(--radius);
+      background: var(--black);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .proof-photo img {
+      width: 100%;
+      height: 100%;
+      min-height: 330px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .review-stack {
+      display: grid;
+      gap: 12px;
+    }
+
+    .review-card {
+      padding: 18px 20px;
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--ink);
+      border-color: rgba(28, 23, 18, 0.1);
+      box-shadow: 0 12px 30px rgba(28, 23, 18, 0.08);
+    }
+
+    .review-card:nth-child(2) {
+      transform: translateX(-22px);
+    }
+
+    .review-card:nth-child(3) {
+      transform: translateX(16px);
+    }
+
+    .stars {
+      color: #f2a900;
+      font-size: 0.98rem;
+      letter-spacing: 0.02em;
+    }
+
+    .review-card p {
+      margin: 8px 0 10px;
+      color: rgba(28, 23, 18, 0.74);
+      font-size: 0.94rem;
+    }
+
+    .review-card strong {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.86rem;
+    }
+
+    .review-card strong::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--yellow);
+    }
+
+    .cta-section {
+      background:
+        linear-gradient(135deg, rgba(8, 7, 6, 0.96), rgba(16, 13, 10, 0.92)),
+        var(--black);
+    }
+
+    .cta-card {
+      display: grid;
+      grid-template-columns: minmax(290px, 0.82fr) minmax(0, 1fr);
+      gap: clamp(16px, 2.4vw, 28px);
+      align-items: stretch;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 16px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(244, 178, 27, 0.22);
+      background:
+        radial-gradient(circle at 0 0, rgba(244, 178, 27, 0.14), transparent 34%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025)),
+        rgba(20, 16, 10, 0.94);
+      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.38);
+    }
+
+    .cta-image {
+      min-height: 100%;
+      overflow: hidden;
+      border-radius: var(--radius);
+      background: var(--coal);
+    }
+
+    .cta-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 410px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .form-panel {
+      display: grid;
+      align-content: center;
+      padding: clamp(18px, 2.4vw, 28px) clamp(12px, 1.6vw, 20px);
+    }
+
+    .form-panel .section-title {
+      max-width: 540px;
+      font-size: clamp(1.45rem, 2.05vw, 2.05rem);
+      line-height: 1.08;
+    }
+
+    .form-panel .section-lead {
+      max-width: 520px;
+      font-size: 1rem;
+      margin-top: 16px;
+    }
+
+    .event-form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .event-form .button {
+      grid-column: 1 / -1;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.055);
+    }
+
+    .field label {
+      color: rgba(255, 248, 232, 0.76);
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      min-height: 44px;
+      padding: 0 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(244, 178, 27, 0.16);
+      background: rgba(8, 7, 6, 0.36);
+      color: var(--text);
+      outline: none;
+    }
+
+    .field select option {
+      color: #111;
+      background: #fff;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      border-color: var(--yellow);
+      box-shadow: 0 0 0 3px rgba(244, 178, 27, 0.16);
+    }
+
+    .form-note {
+      margin: 12px 0 0;
+      color: rgba(255, 248, 232, 0.62);
+      font-size: 0.8rem;
+    }
+
+    .faq {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+      align-items: start;
+      justify-items: center;
+      text-align: center;
+    }
+
+    .faq-intro {
+      max-width: 820px;
+      margin-inline: auto;
+    }
+
+    .faq .section-title {
+      max-width: 760px;
+      font-size: clamp(1.75rem, 2.75vw, 2.65rem);
+      line-height: 1.02;
+      margin-inline: auto;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+      width: 100%;
+      max-width: 920px;
+      margin-inline: auto;
+      text-align: left;
+    }
+
+    .faq-item {
+      padding: 0;
+      background: rgba(255, 255, 255, 0.045);
+      border-color: rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 18px;
+      cursor: pointer;
+      list-style: none;
+      margin: 0;
+      color: var(--yellow);
+      font-size: 1rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: "+";
+      color: var(--text);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .faq-item[open] summary::after { content: "-"; }
+
+    .faq-item p {
+      margin: 0;
+      padding: 0 18px 17px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer {
+      padding: 30px 0;
+      background: var(--yellow);
+      color: rgba(18, 13, 6, 0.76);
+      font-size: 0.86rem;
+    }
+
+    .footer .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer-brand img {
+      width: 126px;
+      height: auto;
+      filter: brightness(0) saturate(100%);
+    }
+
+    .footer-copy {
+      display: grid;
+      gap: 3px;
+    }
+
+    .footer-copy strong {
+      color: #120d06;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .footer-credit {
+      color: #120d06;
+      font-weight: 900;
+    }
+
+    .footer a {
+      color: #120d06;
+      font-weight: 800;
+      text-decoration-color: rgba(18, 13, 6, 0.35);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 1ms !important;
+        scroll-behavior: auto !important;
+        transition-duration: 1ms !important;
+      }
+    }
+
+    @media (max-width: 940px) {
+      .split,
+      .faq,
+      .proof-layout,
+      .buffet-showcase,
+      .cta-card {
+        grid-template-columns: 1fr;
+      }
+
+      #operacao .split {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid,
+      .event-form {
+        grid-template-columns: 1fr;
+      }
+
+      .buffet-card:nth-child(2),
+      .buffet-card:nth-child(3),
+      .review-card:nth-child(2),
+      .review-card:nth-child(3),
+      .gallery-item.lift {
+        margin-left: 0;
+        transform: none;
+      }
+
+      .media-panel,
+      .media-panel img {
+        min-height: 320px;
+      }
+
+      .media-panel {
+        width: min(100%, 520px);
+        justify-self: start;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 220px;
+        width: min(100%, 760px);
+        gap: 0;
+      }
+
+      .gallery-item.featured,
+      .gallery-item.panorama {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container,
+      .hero-nav,
+      .hero-content {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .hero {
+        height: auto;
+        min-height: 100svh;
+      }
+
+      .hero-overlay {
+        background:
+          linear-gradient(180deg, rgba(8, 7, 6, 0.12) 0%, rgba(8, 7, 6, 0.2) 34%, rgba(8, 7, 6, 0.82) 72%, rgba(8, 7, 6, 0.94) 100%);
+      }
+
+      .hero-nav {
+        padding-top: 14px;
+      }
+
+      .brand img {
+        width: 126px;
+        height: auto;
+      }
+
+      .hero-nav .button {
+        display: none;
+      }
+
+      .hero-content {
+        align-content: end;
+        min-height: 0;
+        padding: 28px 0 30px;
+      }
+
+      .hero-copy {
+        max-width: 390px;
+        margin-inline: auto;
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: clamp(1.52rem, 6.55vw, 1.95rem);
+        line-height: 1;
+        text-wrap: wrap;
+      }
+
+      .hero-subtitle {
+        max-width: 31ch;
+        margin-inline: auto;
+        font-size: 0.93rem;
+        line-height: 1.58;
+      }
+
+      .hero .eyebrow {
+        display: inline-flex;
+        justify-content: center;
+        gap: 8px;
+        max-width: 100%;
+        font-size: 0.62rem;
+        line-height: 1.3;
+        letter-spacing: 0.09em;
+      }
+
+      .hero .eyebrow::before {
+        width: 22px;
+      }
+
+      .hero-actions .button,
+      .event-form .button {
+        width: 100%;
+      }
+
+      .hero-actions {
+        width: min(100%, 400px);
+        margin-inline: auto;
+        justify-content: center;
+      }
+
+      .hero-stats {
+        display: none;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .section-title {
+        font-size: clamp(1.75rem, 8vw, 2.65rem);
+      }
+
+      .feature-card,
+      .buffet-card,
+      .review-card {
+        padding: 18px;
+      }
+
+      .media-panel,
+      .media-panel img {
+        min-height: 260px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: 0;
+      }
+
+      .gallery-item.featured,
+      .gallery-item.wide,
+      .gallery-item.panorama,
+      .gallery-item {
+        grid-column: auto;
+        grid-row: auto;
+        height: 240px;
+      }
+
+      .quote-band {
+        min-height: 620px;
+        align-items: end;
+        padding-top: 180px;
+        padding-bottom: 54px;
+        background:
+          linear-gradient(180deg, rgba(8, 7, 6, 0.42), rgba(8, 7, 6, 0.95) 70%),
+          url("{{ url_for('static', filename='img/event-service.jpg') }}") center / cover no-repeat;
+      }
+
+      .form-panel {
+        padding: 18px 6px 8px;
+      }
+
+      .form-panel .section-title {
+        font-size: clamp(1.45rem, 7vw, 1.95rem);
+      }
+
+      .event-form {
+        gap: 9px;
+      }
+
+      .field {
+        padding: 9px;
+      }
+
+      .cta-image img {
+        min-height: 260px;
+      }
+
+      .footer .container,
+      .footer-brand {
+        align-items: flex-start;
+      }
+
+      .footer-brand {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6G29MB5"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="hero" id="top">
+    <picture class="hero-media" aria-hidden="true">
+      <source media="(max-width: 680px)" srcset="{{ url_for('static', filename='img/hero mobile.png') }}">
+      <img src="{{ url_for('static', filename='img/hero pc.png') }}" alt="">
+    </picture>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <nav class="hero-nav" aria-label="Navegação principal">
+      <a class="brand" href="#top" aria-label="Firebull">
+        <img src="{{ url_for('static', filename='img/firebull-wordmark.svg') }}" alt="Firebull">
+      </a>
+      <a class="button js-cta" href="#orcamento">Solicitar orçamento</a>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-copy">
+        <p class="eyebrow">Buffet de mini-hambúrguer para eventos</p>
+        <h1 class="hero-title">
+          <span class="hero-line">Faça um evento inesquecível</span>
+          <span class="hero-line">com o sabor do hambúrguer</span>
+          <span class="hero-brand">Firebull</span>
+        </h1>
+        <p class="hero-subtitle">
+          Mini-hambúrgueres artesanais preparados na hora, batatas sempre crocantes e uma operação pronta para fazer seu evento acontecer com muito sucesso.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary js-cta" href="#orcamento">Quero meu orçamento</a>
+          <a class="button button-dark" href="#buffet">Ver buffet completo</a>
+        </div>
+        <div class="hero-stats" aria-label="Destaques do buffet Firebull">
+          <div class="stat">
+            <strong>4h</strong>
+            <span>de serviço com cardápio à vontade</span>
+          </div>
+          <div class="stat">
+            <strong>150</strong>
+            <span>hambúrgueres por hora em operação</span>
+          </div>
+          <div class="stat">
+            <strong>100%</strong>
+            <span>artesanal, fresco e preparado na hora</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="marquee" aria-label="Diferenciais Firebull">
+      <div class="marquee-track">
+        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Mini-hambúrguer artesanal</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Batata sempre crocante</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Equipe treinada</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Estrutura completa</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Atendimento ágil</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Mini-hambúrguer artesanal</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Batata sempre crocante</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Equipe treinada</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Estrutura completa</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Atendimento ágil</span>
+      </div>
+    </div>
+
+    <section class="section section-dark" id="operacao" aria-labelledby="operacao-title">
+      <div class="container">
+        <div class="split">
+          <div>
+            <p class="eyebrow">Uma hamburgueria no seu evento</p>
+            <h2 class="section-title" id="operacao-title">Levamos uma hamburgueria completa para o seu evento.</h2>
+            <p class="section-lead">
+              Preparamos os hambúrgueres, montamos toda a estrutura, levamos a equipe e servimos seus convidados com qualidade, agilidade e organização.
+            </p>
+          </div>
+          <div class="media-panel">
+            <img src="{{ url_for('static', filename='img/team-service.jpg') }}" alt="Equipe Firebull servindo mini-hambúrgueres e batatas em evento">
+            <div class="media-caption">
+              <strong>Operação completa</strong>
+              <span>Da montagem ao último convidado servido.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M20 7 9 18l-5-5"></path><path d="M4 7h5"></path><path d="M14 7h6"></path></svg>
+            </div>
+            <h3>Qualidade garantida</h3>
+            <p>Mini-hambúrgueres artesanais feitos com carne fresca e ingredientes selecionados, sempre no ponto certo.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 7h11v8H3z"></path><path d="M14 10h4l3 3v2h-7z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg>
+            </div>
+            <h3>Logística versátil</h3>
+            <p>Nossa estrutura se adapta ao espaço do evento com operação organizada, mesas de apoio e fluxo pensado para servir bem.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3c4.5 0 8 3.2 8 7.3V14H4v-3.7C4 6.2 7.5 3 12 3z"></path><path d="M3 14h18"></path><path d="M7 18h10"></path><path d="M9 21h6"></path></svg>
+            </div>
+            <h3>Atendimento premium</h3>
+            <p>Equipe treinada, uniformizada e preparada para entregar um atendimento impecável ao longo da celebração.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-yellow" id="buffet" aria-labelledby="buffet-title">
+      <div class="container">
+        <p class="eyebrow">Buffet sem pausa, sem improviso</p>
+        <h2 class="section-title" id="buffet-title"><span>BUFFET COMPLETO</span> PARA O SEU EVENTO</h2>
+        <p class="section-lead">
+          4 horas de serviço com um cardápio à vontade e uma operação preparada para servir seus convidados do início ao fim.
+        </p>
+
+        <div class="buffet-showcase">
+          <div class="buffet-summary">
+            <span class="buffet-badge">4 horas de serviço</span>
+            <h3>Rodízio completo, equipe ativa e comida saindo quente.</h3>
+            <p>Uma operação pensada para manter fluxo, qualidade e convidados bem servidos do início ao fim.</p>
+            <div class="menu-pills" aria-label="Itens do cardápio">
+              <span>Saladas</span>
+              <span>Mini salgados</span>
+              <span>Mini pastéis</span>
+              <span>Mini burgers</span>
+              <span>Batata frita</span>
+            </div>
+          </div>
+          <div class="buffet-list">
+            <article class="buffet-card">
+              <span class="buffet-number">01</span>
+              <div>
+                <h3>4 horas de rodízio</h3>
+                <p>Cardápio servido à vontade, com reposição e equipe acompanhando o ritmo do evento.</p>
+              </div>
+            </article>
+            <article class="buffet-card">
+              <span class="buffet-number">02</span>
+              <div>
+                <h3>Alta capacidade</h3>
+                <p>Até <strong>150 hambúrgueres por hora</strong>, sem perder agilidade, padrão e acabamento.</p>
+              </div>
+            </article>
+            <article class="buffet-card">
+              <span class="buffet-number">03</span>
+              <div>
+                <h3>Artesanal de verdade</h3>
+                <p>Carne fresca, ingredientes selecionados e preparo na hora. Nada industrializado ou congelado.</p>
+              </div>
+            </article>
+            <div class="buffet-cta-row">
+              <a class="button section-cta js-cta" href="#orcamento">Solicitar orçamento</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-coal" id="eventos" aria-labelledby="eventos-title">
+      <div class="container">
+        <p class="eyebrow">Para todos os formatos</p>
+        <h2 class="section-title" id="eventos-title">Um evento único pede uma operação única.</h2>
+        <p class="section-lead">
+          Desde pequenas celebrações até grandes eventos, a Firebull adapta estrutura, equipe e operação para que tudo aconteça exatamente como você imaginou.
+        </p>
+
+        <div class="gallery" aria-label="Fotos da operação Firebull em eventos">
+          <figure class="gallery-item featured">
+            <img src="{{ url_for('static', filename='img/event-service.jpg') }}" alt="Equipe Firebull servindo convidados durante evento">
+            <figcaption class="gallery-label">Eventos particulares</figcaption>
+          </figure>
+          <figure class="gallery-item wide">
+            <img src="{{ url_for('static', filename='img/burger-prep.jpg') }}" alt="Mini-hambúrgueres sendo montados na hora">
+            <figcaption class="gallery-label">Preparo na hora</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="{{ url_for('static', filename='img/snacks.jpg') }}" alt="Mini salgados e mini pastéis em bandejas para evento">
+            <figcaption class="gallery-label">Salgados e pastéis</figcaption>
+          </figure>
+          <figure class="gallery-item lift">
+            <img src="{{ url_for('static', filename='img/fries.jpg') }}" alt="Batatas fritas crocantes servidas em porções individuais">
+            <figcaption class="gallery-label">Batatas crocantes</figcaption>
+          </figure>
+          <figure class="gallery-item wide">
+            <img src="{{ url_for('static', filename='img/truck.jpg') }}" alt="Food truck Firebull pronto para atender eventos">
+            <figcaption class="gallery-label">Estrutura no local</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-paper" id="prova" aria-labelledby="prova-title">
+      <div class="container">
+        <p class="eyebrow">Quem prova, recomenda</p>
+        <h2 class="section-title" id="prova-title">Sabor, organização e atendimento no mesmo nível.</h2>
+        <p class="section-lead">
+          A experiência precisa ser boa para quem contrata e para quem está na festa. Por isso a Firebull une operação, equipe e comida feita de verdade.
+        </p>
+        <div class="proof-layout">
+          <div class="proof-photo">
+          <img src="{{ url_for('static', filename='img/moment-firebull.png') }}" alt="Mini-hambúrgueres e batatas Firebull servidos em evento">
+          </div>
+          <div class="review-stack">
+            <article class="review-card">
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+              <p>“Hambúrguer no ponto, suculento e batatinhas ótimas. Sempre uma ótima opção.”</p>
+              <strong>Flávia Walter</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+              <p>“Atendimento maravilhoso, tudo muito limpo e bem cuidado. Vale a pena experimentar.”</p>
+              <strong>Alexania Schild</strong>
+            </article>
+            <article class="review-card">
+              <div class="stars" aria-label="5 estrelas">★★★★★</div>
+              <p>“Carne suculenta, saladas frescas, batata deliciosa e produtos de primeira qualidade.”</p>
+              <strong>Isis Ribeiro</strong>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quote-band" id="momentos" aria-labelledby="momentos-title">
+      <div class="container">
+        <p class="eyebrow">A parte que todo mundo comenta depois</p>
+        <h2 class="section-title" id="momentos-title">Mais do que servir hambúrgueres. Criamos momentos inesquecíveis.</h2>
+        <p class="section-lead">
+          A Firebull transforma a alimentação em um dos momentos mais marcantes da celebração, reunindo sabor, experiência e boas lembranças em cada detalhe.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="faq" aria-labelledby="faq-title">
+      <div class="container faq">
+        <div class="faq-intro">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title" id="faq-title">Dúvidas rápidas antes de chamar a Firebull.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>O que está incluso?</summary>
+            <p>4 horas de rodízio com salada, salgados, pastéis, mini-hambúrgueres e batata frita à vontade.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Qual é o mínimo de convidados?</summary>
+            <p>Atendimento a partir de 30 pagantes. O orçamento muda conforme quantidade e formato.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Vocês levam equipe?</summary>
+            <p>Sim. A Firebull leva equipe treinada, uniformizada e preparada para servir o evento.</p>
+          </details>
+          <details class="faq-item">
+            <summary>O que o local precisa ter?</summary>
+            <p>Geralmente bancada com pia de apoio, geladeira ou freezer e tomadas 220V.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Como recebo o orçamento?</summary>
+            <p>Você envia os dados pelo formulário e continua a conversa direto no WhatsApp.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="orcamento" aria-labelledby="orcamento-title">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-image">
+            <img src="{{ url_for('static', filename='img/truck.jpg') }}" alt="Food truck Firebull pronto para eventos">
+          </div>
+          <div class="form-panel">
+            <p class="eyebrow">Comece pelo orçamento</p>
+            <h2 class="section-title" id="orcamento-title">Solicite um orçamento personalizado e comece a planejar um evento inesquecível.</h2>
+            <p class="section-lead">
+              Envie os dados principais do seu evento e fale com a Firebull pelo WhatsApp.
+            </p>
+
+            <form class="event-form" id="event-form">
+              <div class="field">
+                <label for="name">Nome</label>
+                <input id="name" name="name" autocomplete="name" placeholder="Seu nome" required>
+              </div>
+              <div class="field">
+                <label for="phone">WhatsApp</label>
+                <input id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" required>
+              </div>
+              <div class="field">
+                <label for="guests">Quantidade de convidados</label>
+                <input id="guests" name="guests" inputmode="numeric" placeholder="Ex: 80 convidados">
+              </div>
+              <div class="field">
+                <label for="event-type">Tipo de evento</label>
+                <select id="event-type" name="event-type">
+                  <option value="Aniversário">Aniversário</option>
+                  <option value="Casamento">Casamento</option>
+                  <option value="Corporativo">Corporativo</option>
+                  <option value="Evento particular">Evento particular</option>
+                  <option value="Outro">Outro</option>
+                </select>
+              </div>
+              <button class="button button-primary js-cta" type="submit">Continuar no WhatsApp</button>
+            </form>
+            <p class="form-note">Ao enviar, você será direcionado para o WhatsApp com a mensagem pronta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        <img src="{{ url_for('static', filename='img/firebull-wordmark.svg') }}" alt="Firebull">
+        <div class="footer-copy">
+          <strong>Firebull Burger Eventos</strong>
+          <span>Mini-hambúrguer artesanal para celebrações inesquecíveis.</span>
+        </div>
+      </div>
+      <span class="footer-credit">Produzido por V4 Company Lisboa & Co</span>
+      <a class="js-cta" href="https://wa.me/5519989710823?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20evento%20com%20a%20Firebull." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const whatsappNumber = "5519989710823";
+      const params = new URLSearchParams(window.location.search);
+      const utms = ["utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"]
+        .map((key) => params.get(key) ? `${key}: ${params.get(key)}` : "")
+        .filter(Boolean)
+        .join(" | ");
+
+      window.trackCTA = window.trackCTA || function (label) {
+        if (window.firebullTrack) {
+          window.firebullTrack("click_cta", { cta_label: label || "cta_firebull" });
+        } else {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: "click_cta", cta_label: label || "cta_firebull" });
+        }
+        console.log("CTA clicado", label || "cta_firebull");
+      };
+
+      document.querySelectorAll(".js-cta").forEach((el) => {
+        el.addEventListener("click", () => window.trackCTA(el.textContent.trim()));
+      });
+
+      const form = document.getElementById("event-form");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        window.trackCTA("formulario_orcamento");
+
+        const data = new FormData(form);
+        const message = [
+          "Olá, vim pela landing page da Firebull e quero um orçamento personalizado.",
+          "",
+          `Nome: ${data.get("name") || ""}`,
+          `WhatsApp: ${data.get("phone") || ""}`,
+          `Convidados: ${data.get("guests") || "a definir"}`,
+          `Tipo de evento: ${data.get("event-type") || "a definir"}`,
+          utms ? `Origem: ${utms}` : ""
+        ].filter(Boolean).join("\n");
+
+        const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        window.open(url, "_blank", "noopener,noreferrer");
+      });
+    })();
+  </script>
+</body>
+</html>
