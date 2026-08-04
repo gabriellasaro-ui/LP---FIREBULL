@@ -813,3 +813,15 @@ Press CTRL+C to quit
 192.168.0.16 - - [17/Jul/2026 16:55:28] "GET /static/img/moment-firebull.png HTTP/1.1" 304 -
 192.168.0.16 - - [17/Jul/2026 16:55:28] "GET /static/img/firebull-logo.png HTTP/1.1" 304 -
 127.0.0.1 - - [17/Jul/2026 16:55:29] "HEAD /index HTTP/1.1" 200 -
+192.168.0.16 - - [17/Jul/2026 17:52:01] "GET /INDEX HTTP/1.1" 200 -
+192.168.0.16 - - [17/Jul/2026 17:52:01] "GET /static/tracking.js HTTP/1.1" 304 -
+192.168.0.16 - - [17/Jul/2026 17:52:01] "GET /static/img/hero%20pc.png HTTP/1.1" 304 -
+192.168.0.16 - - [17/Jul/2026 17:52:01] "GET /static/img/burger-prep.jpg HTTP/1.1" 304 -
+192.168.0.16 - - [17/Jul/2026 17:52:01] "GET /static/img/firebull-wordmark.svg HTTP/1.1" 304 -
+192.168.0.16 - - [17/Jul/2026 17:52:01] "GET /static/img/team-service.jpg HTTP/1.1" 304 -
+192.168.0.16 - - [17/Jul/2026 17:52:01] "GET /static/img/event-service.jpg HTTP/1.1" 304 -
+192.168.0.16 - - [17/Jul/2026 17:52:01] "GET /static/img/snacks.jpg HTTP/1.1" 304 -
+192.168.0.16 - - [17/Jul/2026 17:52:01] "GET /static/img/fries.jpg HTTP/1.1" 304 -
+192.168.0.16 - - [17/Jul/2026 17:52:01] "GET /static/img/truck.jpg HTTP/1.1" 304 -
+192.168.0.16 - - [17/Jul/2026 17:52:01] "GET /static/img/IMG_7132.JPG HTTP/1.1" 200 -
+192.168.0.16 - - [17/Jul/2026 17:52:02] "GET /static/img/firebull-logo.png HTTP/1.1" 304 -

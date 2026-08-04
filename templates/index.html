@@ -13,8 +13,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Buffet de Mini-Hamburguer para Eventos | Firebull</title>
-  <meta name="description" content="Leve a Firebull para seu evento com mini-hambúrgueres artesanais, batatas crocantes, salgados, equipe treinada e 4 horas de buffet completo.">
-  <meta property="og:title" content="Faça um evento inesquecível com a Firebull">
+  <meta name="description" content="Leve a Firebull para seu evento com mini-hambúrgueres artesanais, batatas crocantes, salgados, equipe treinada e buffet completo.">
+  <meta property="og:title" content="Leve o verdadeiro mini burguer artesanal para seu evento">
   <meta property="og:description" content="Mini-hambúrgueres artesanais preparados na hora e uma operação completa para eventos de todos os tamanhos.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="{{ url_for('static', filename='img/hero pc.png') }}">
@@ -429,7 +429,7 @@
 
     .feature-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 14px;
       margin-top: 34px;
     }
@@ -444,33 +444,46 @@
     }
 
     .feature-card {
-      padding: 20px 18px 20px 0;
-      min-height: auto;
-      background: transparent;
-      border-width: 0 0 0 2px;
-      border-color: rgba(244, 178, 27, 0.55);
-      padding-left: 20px;
+      position: relative;
+      padding: 112px 16px 36px;
+      min-height: 340px;
+      background: var(--paper);
+      border: 0;
+      color: var(--ink);
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 84%, 50% 100%, 0 84%);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.16);
     }
 
     .feature-icon {
-      width: 38px;
-      height: 38px;
-      margin-bottom: 18px;
-      color: var(--yellow);
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      width: 86px;
+      height: 86px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 0;
+      color: var(--text);
+      background: var(--black);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      border: 4px solid var(--yellow);
     }
 
     .feature-icon svg {
-      width: 100%;
-      height: 100%;
+      width: 48px;
+      height: 48px;
       fill: none;
       stroke: currentColor;
-      stroke-width: 1.8;
+      stroke-width: 1.6;
       stroke-linecap: round;
       stroke-linejoin: round;
     }
 
     .feature-card h3,
-    .buffet-card h3 {
+    .buffet-card h3,
+    .food-card h3 {
       margin: 0;
       color: var(--text);
       font-size: 1.05rem;
@@ -478,11 +491,27 @@
       text-transform: uppercase;
     }
 
+    .feature-card h3 {
+      color: var(--black);
+      font-size: 0.98rem;
+    }
+
     .feature-card p,
-    .buffet-card p {
+    .buffet-card p,
+    .food-card p {
       margin: 12px 0 0;
       color: var(--muted);
       font-size: 0.96rem;
+    }
+
+    .feature-card p {
+      color: rgba(28, 23, 18, 0.78);
+      font-size: 0.9rem;
+    }
+
+    .feature-card strong {
+      color: var(--black);
+      font-weight: 950;
     }
 
     .media-panel {
@@ -546,118 +575,101 @@
 
     .buffet-showcase {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 1.02fr 1.28fr;
       gap: 22px;
       align-items: stretch;
       margin-top: 38px;
     }
 
-    .buffet-summary {
-      position: relative;
-      min-height: 100%;
-      padding: clamp(24px, 4vw, 38px);
+    .menu-board {
+      padding: clamp(22px, 3vw, 30px);
       border-radius: var(--radius);
-      background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)),
-        var(--black);
-      color: var(--text);
+      background: var(--paper);
+      color: var(--ink);
+      box-shadow: 0 18px 42px rgba(18, 13, 6, 0.18);
+    }
+
+    .menu-board h3 {
+      margin: 0 0 22px;
+      color: var(--black);
+      font-size: 1.05rem;
+      line-height: 1.15;
+      text-transform: uppercase;
+    }
+
+    .menu-section + .menu-section {
+      margin-top: 26px;
+    }
+
+    .menu-section h4 {
+      margin: 0 0 14px;
+      color: var(--black);
+      font-size: 0.92rem;
+      text-transform: uppercase;
+    }
+
+    .menu-item + .menu-item {
+      margin-top: 14px;
+    }
+
+    .menu-item strong {
+      display: block;
+      color: var(--black);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .menu-item span {
+      display: block;
+      margin-top: 2px;
+      color: rgba(28, 23, 18, 0.76);
+      font-size: 0.92rem;
+    }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .food-grid .buffet-cta-row {
+      grid-column: 1 / -1;
+    }
+
+    .food-card {
+      position: relative;
+      min-height: 218px;
       overflow: hidden;
-      box-shadow: 0 18px 42px rgba(18, 13, 6, 0.28);
+      border-radius: var(--radius);
+      background: var(--black);
+      box-shadow: 0 14px 30px rgba(18, 13, 6, 0.2);
     }
 
-    .buffet-summary::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 46%;
+    .food-card img {
+      width: 100%;
       height: 100%;
-      background: repeating-linear-gradient(135deg, rgba(244, 178, 27, 0.18) 0 8px, transparent 8px 18px);
-      clip-path: polygon(38% 0, 100% 0, 100% 100%, 0 100%);
-      pointer-events: none;
+      min-height: 218px;
+      object-fit: cover;
+      transition: transform 420ms ease;
     }
 
-    .buffet-badge {
-      position: relative;
-      display: inline-flex;
-      margin-bottom: 22px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: var(--yellow);
-      color: #120d06;
-      font-size: 0.78rem;
-      font-weight: 950;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
+    .food-card:hover img {
+      transform: scale(1.035);
     }
 
-    .buffet-summary h3 {
-      position: relative;
-      max-width: 440px;
-      margin: 0;
-      font-size: clamp(1.65rem, 3vw, 2.9rem);
-      line-height: 1;
-      text-transform: uppercase;
+    .food-card figcaption {
+      position: absolute;
+      inset: auto 10px 10px;
+      padding: 10px;
+      border-radius: 6px;
+      background: rgba(8, 7, 6, 0.78);
+      color: var(--text);
+      backdrop-filter: blur(10px);
     }
 
-    .buffet-summary p {
-      position: relative;
-      max-width: 430px;
-      margin: 16px 0 0;
-      color: rgba(255, 248, 232, 0.72);
-      font-size: 1rem;
-    }
-
-    .menu-pills {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 24px;
-    }
-
-    .menu-pills span {
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(244, 178, 27, 0.14);
-      border: 1px solid rgba(244, 178, 27, 0.24);
-      color: var(--cream);
-      font-size: 0.78rem;
-      font-weight: 800;
-    }
-
-    .buffet-list {
-      display: grid;
-      align-content: start;
-      gap: 12px;
-    }
-
-    .buffet-card {
-      display: grid;
-      grid-template-columns: 54px minmax(0, 1fr);
-      gap: 16px;
-      align-items: start;
-      min-height: auto;
-      padding: 20px;
-      background: linear-gradient(90deg, rgba(8, 7, 6, 0.94), rgba(22, 17, 10, 0.9));
-      box-shadow: 0 12px 28px rgba(18, 13, 6, 0.18);
-    }
-
-    .buffet-card:nth-child(2) { margin-left: 26px; }
-    .buffet-card:nth-child(3) { margin-left: 52px; }
-
-    .buffet-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: var(--yellow);
-      color: #120d06;
-      font-size: 0.95rem;
-      font-weight: 950;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.38);
+    .food-card p {
+      color: rgba(255, 248, 232, 0.78);
+      font-size: 0.82rem;
     }
 
     #eventos .section-title {
@@ -1072,6 +1084,10 @@
         grid-template-columns: 1fr;
       }
 
+      .feature-grid {
+        gap: 18px;
+      }
+
       .buffet-card:nth-child(2),
       .buffet-card:nth-child(3),
       .review-card:nth-child(2),
@@ -1214,6 +1230,10 @@
         gap: 0;
       }
 
+      .food-grid {
+        grid-template-columns: 1fr;
+      }
+
       .gallery-item.featured,
       .gallery-item.wide,
       .gallery-item.panorama,
@@ -1288,9 +1308,9 @@
       <div class="hero-copy">
         <p class="eyebrow">Buffet de mini-hambúrguer para eventos</p>
         <h1 class="hero-title">
-          <span class="hero-line">Faça um evento inesquecível</span>
-          <span class="hero-line">com o sabor do hambúrguer</span>
-          <span class="hero-brand">Firebull</span>
+          <span class="hero-line">Leve o verdadeiro</span>
+          <span class="hero-line">mini burguer artesanal</span>
+          <span class="hero-brand">para seu evento</span>
         </h1>
         <p class="hero-subtitle">
           Mini-hambúrgueres artesanais preparados na hora, batatas sempre crocantes e uma operação pronta para fazer seu evento acontecer com muito sucesso.
@@ -1301,8 +1321,8 @@
         </div>
         <div class="hero-stats" aria-label="Destaques do buffet Firebull">
           <div class="stat">
-            <strong>4h</strong>
-            <span>de serviço com cardápio à vontade</span>
+            <strong>Cardápio</strong>
+            <span>com mini burgers, batata frita, salgados e pastéis</span>
           </div>
           <div class="stat">
             <strong>Centenas</strong>
@@ -1355,24 +1375,38 @@
         <div class="feature-grid">
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M20 7 9 18l-5-5"></path><path d="M4 7h5"></path><path d="M14 7h6"></path></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 3l1.7 3.4 3.8.6-2.8 2.7.7 3.8L12 11.7l-3.4 1.8.7-3.8L6.5 7l3.8-.6L12 3Z"></path><path d="M5.2 12.8a6 6 0 0 0 13.6 0"></path><path d="M9 20h6"></path></svg>
             </div>
-            <h3>Qualidade garantida</h3>
-            <p>Mini-hambúrgueres artesanais feitos com carne fresca e ingredientes selecionados, sempre no ponto certo.</p>
+            <h3>Experiência</h3>
+            <p>Mais de <strong>10 anos de experiência</strong> em eventos de todos os tipos e tamanhos, com profissionalismo e um <strong>padrão de atendimento que encanta.</strong></p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M3 7h11v8H3z"></path><path d="M14 10h4l3 3v2h-7z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg>
+              <svg viewBox="0 0 24 24"><path d="M4 11.5C4.8 7.2 8 5 12 5s7.2 2.2 8 6.5H4Z"></path><path d="M5 14h14a1.7 1.7 0 0 1 0 3.4H5A1.7 1.7 0 0 1 5 14Z"></path><path d="M6.5 20h11"></path><path d="M8 8h.01M12 8h.01M16 8h.01"></path></svg>
+            </div>
+            <h3>Qualidade sem enganação</h3>
+            <p>Mini-hambúrgueres preparados com <strong>carne fresca e ingredientes selecionados</strong>, garantindo sabor de verdade.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 7h11v8H3z"></path><path d="M14 10h4l3 3v2h-7z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle><path d="M6 4h5"></path></svg>
             </div>
             <h3>Logística versátil</h3>
-            <p>Nossa estrutura se adapta ao espaço do evento com operação organizada, mesas de apoio e fluxo pensado para servir bem.</p>
+            <p>Seu evento com nossos <strong>food trucks</strong> ou uma <strong>estação completa</strong> em salões de festas, áreas gourmet e churrasqueiras.</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3c4.5 0 8 3.2 8 7.3V14H4v-3.7C4 6.2 7.5 3 12 3z"></path><path d="M3 14h18"></path><path d="M7 18h10"></path><path d="M9 21h6"></path></svg>
+              <svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-8 0"></path><path d="M3 20a7 7 0 0 1 18 0"></path><path d="M19 8a3 3 0 0 1 0 6"></path><path d="M5 8a3 3 0 0 0 0 6"></path></svg>
             </div>
-            <h3>Atendimento premium</h3>
-            <p>Equipe treinada, uniformizada e preparada para entregar um atendimento impecável ao longo da celebração.</p>
+            <h3>Equipe profissional</h3>
+            <p><strong>Equipe profissional, treinada e uniformizada</strong>, com garçons dedicados para um <strong>atendimento ágil e de alto padrão</strong>.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v18"></path><path d="M3 12h18"></path><circle cx="12" cy="12" r="8"></circle></svg>
+            </div>
+            <h3>Segurança</h3>
+            <p>Documentação exigida pela <strong>Vigilância Sanitária</strong>, equipe treinada e operação com foco em <strong>higiene e segurança.</strong></p>
           </article>
         </div>
       </div>
@@ -1383,44 +1417,68 @@
         <p class="eyebrow">Buffet sem pausa, sem improviso</p>
         <h2 class="section-title" id="buffet-title"><span>BUFFET COMPLETO</span> PARA O SEU EVENTO</h2>
         <p class="section-lead">
-          4 horas de serviço com um cardápio à vontade e uma operação preparada para servir seus convidados do início ao fim.
+          Um cardápio completo, feito com ingredientes frescos, reposição constante e comida saindo quente para seus convidados.
         </p>
 
         <div class="buffet-showcase">
-          <div class="buffet-summary">
-            <span class="buffet-badge">4 horas de serviço</span>
-            <h3>Rodízio completo, equipe ativa e comida saindo quente.</h3>
-            <p>Uma operação pensada para manter fluxo, qualidade e convidados bem servidos do início ao fim.</p>
-            <div class="menu-pills" aria-label="Itens do cardápio">
-              <span>Saladas</span>
-              <span>Mini salgados</span>
-              <span>Mini pastéis</span>
-              <span>Mini burgers</span>
-              <span>Batata frita</span>
+          <div class="menu-board">
+            <h3>Cardápio que surpreende</h3>
+            <div class="menu-section">
+              <h4>Entradas</h4>
+              <div class="menu-item">
+                <strong>Salada Fresh</strong>
+                <span>Mix de folhas com molho especial da casa.</span>
+              </div>
+              <div class="menu-item">
+                <strong>Mini salgados</strong>
+                <span>Coxinha, bolinha de queijo, croquete e risoles de palmito.</span>
+              </div>
+              <div class="menu-item">
+                <strong>Mini pastéis</strong>
+                <span>Mini pastel de queijo e mini pastel de carne.</span>
+              </div>
+            </div>
+            <div class="menu-section">
+              <h4>Mini burgers artesanais</h4>
+              <div class="menu-item"><strong>Burger</strong><span>Pão, carne, queijo e maionese.</span></div>
+              <div class="menu-item"><strong>Bacon</strong><span>Pão, carne, queijo, bacon e maionese.</span></div>
+              <div class="menu-item"><strong>Salad</strong><span>Pão, carne, queijo, alface, tomate e maionese.</span></div>
+              <div class="menu-item"><strong>Quarter</strong><span>Pão, carne, queijo, cebola picada, picles, ketchup e mostarda.</span></div>
+              <div class="menu-item"><strong>BLT</strong><span>Pão, carne, queijo, bacon, alface, tomate e maionese.</span></div>
+              <div class="menu-item"><strong>Melt</strong><span>Pão, carne, queijo e cebola caramelizada.</span></div>
+              <div class="menu-item"><strong>Veggie</strong><span>Pão, falafel, queijo, alface, tomate e maionese.</span></div>
+              <div class="menu-item"><strong>Batata frita</strong><span>Frita na hora, sequinha e crocante.</span></div>
             </div>
           </div>
-          <div class="buffet-list">
-            <article class="buffet-card">
-              <span class="buffet-number">01</span>
-              <div>
-                <h3>4 horas de rodízio</h3>
-                <p>Cardápio servido à vontade, com reposição e equipe acompanhando o ritmo do evento.</p>
-              </div>
-            </article>
-            <article class="buffet-card">
-              <span class="buffet-number">02</span>
-              <div>
-                <h3>Alta capacidade</h3>
-                <p><strong>Centenas de hambúrgueres por hora</strong>, sem perder agilidade, padrão e acabamento.</p>
-              </div>
-            </article>
-            <article class="buffet-card">
-              <span class="buffet-number">03</span>
-              <div>
-                <h3>Artesanal de verdade</h3>
-                <p>Carne fresca, ingredientes selecionados e preparo na hora. Nada industrializado ou congelado.</p>
-              </div>
-            </article>
+          <div class="food-grid" aria-label="Fotos dos itens do buffet Firebull">
+            <figure class="food-card">
+              <img src="{{ url_for('static', filename='img/snacks.jpg') }}" alt="Mini salgados e mini pastéis Firebull">
+              <figcaption>
+                <h3>Mini salgados e pastéis</h3>
+                <p>Coxinha, bolinha de queijo, risoles e pastéis.</p>
+              </figcaption>
+            </figure>
+            <figure class="food-card">
+              <img src="{{ url_for('static', filename='img/burger-prep.jpg') }}" alt="Mini burgers artesanais Firebull">
+              <figcaption>
+                <h3>Mini burgers artesanais</h3>
+                <p>Opções burger, bacon, salad, quarter, BLT, melt e veggie.</p>
+              </figcaption>
+            </figure>
+            <figure class="food-card">
+              <img src="{{ url_for('static', filename='img/fries.jpg') }}" alt="Batata frita Firebull sequinha e crocante">
+              <figcaption>
+                <h3>Batata frita</h3>
+                <p>Frita na hora, sequinha e crocante.</p>
+              </figcaption>
+            </figure>
+            <figure class="food-card">
+              <img src="{{ url_for('static', filename='img/IMG_7132.JPG') }}" alt="Mini burgers e batatas servidos em evento Firebull">
+              <figcaption>
+                <h3>Comida quente</h3>
+                <p>Reposição constante para manter o buffet sempre bonito.</p>
+              </figcaption>
+            </figure>
             <div class="buffet-cta-row">
               <a class="button section-cta js-cta" href="#orcamento">Solicitar orçamento</a>
             </div>
@@ -1431,7 +1489,7 @@
 
     <section class="section section-coal" id="eventos" aria-labelledby="eventos-title">
       <div class="container">
-        <p class="eyebrow">Para todos os formatos</p>
+        <p class="eyebrow">Eventos de Todos os Tipos</p>
         <h2 class="section-title" id="eventos-title">Um evento único pede uma operação única.</h2>
         <p class="section-lead">
           Desde pequenas celebrações até grandes eventos, a Firebull adapta estrutura, equipe e operação para que tudo aconteça exatamente como você imaginou.
@@ -1443,7 +1501,7 @@
             <figcaption class="gallery-label">Eventos particulares</figcaption>
           </figure>
           <figure class="gallery-item wide">
-            <img src="{{ url_for('static', filename='img/burger-prep.jpg') }}" alt="Mini-hambúrgueres sendo montados na hora">
+            <img src="{{ url_for('static', filename='img/carne.JPG') }}" alt="Carne artesanal Firebull ainda crua na chapa">
             <figcaption class="gallery-label">Preparo na hora</figcaption>
           </figure>
           <figure class="gallery-item">
@@ -1513,11 +1571,11 @@
         <div class="faq-list">
           <details class="faq-item" open>
             <summary>O que está incluso?</summary>
-            <p>4 horas de rodízio com salada, salgados, pastéis, mini-hambúrgueres e batata frita à vontade.</p>
+            <p>Mini salgados e mini pastéis.</p>
           </details>
           <details class="faq-item">
-            <summary>Qual é o mínimo de convidados?</summary>
-            <p>Atendimento a partir de 30 pagantes. O orçamento muda conforme quantidade e formato.</p>
+            <summary>Quantidade de convidados e forma de pagamento.</summary>
+            <p>Atendemos a partir de 30 pagantes. O orçamento varia conforme a quantidade de convidados e o formato do evento. As formas de pagamento são alinhadas na proposta.</p>
           </details>
           <details class="faq-item">
             <summary>Vocês levam equipe?</summary>
@@ -1525,7 +1583,7 @@
           </details>
           <details class="faq-item">
             <summary>O que o local precisa ter?</summary>
-            <p>Geralmente bancada com pia de apoio, geladeira ou freezer e tomadas 220V.</p>
+            <p>O local precisa ter bancada com pia, geladeira ou freezer e tomadas de 20A, tanto 110V quanto 220V.</p>
           </details>
           <details class="faq-item">
             <summary>Como recebo o orçamento?</summary>
@@ -1539,7 +1597,7 @@
       <div class="container">
         <div class="cta-card">
           <div class="cta-image">
-            <img src="{{ url_for('static', filename='img/truck.jpg') }}" alt="Food truck Firebull pronto para eventos">
+            <img src="{{ url_for('static', filename='img/Firebull Burguer- 223-3499.jpg') }}" alt="Mini burgers Firebull servidos no evento">
           </div>
           <div class="form-panel">
             <p class="eyebrow">Comece pelo orçamento</p>
