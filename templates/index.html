@@ -482,8 +482,7 @@
     }
 
     .feature-card h3,
-    .buffet-card h3,
-    .food-card h3 {
+    .buffet-card h3 {
       margin: 0;
       color: var(--text);
       font-size: 1.05rem;
@@ -497,11 +496,20 @@
     }
 
     .feature-card p,
-    .buffet-card p,
-    .food-card p {
+    .buffet-card p {
       margin: 12px 0 0;
       color: var(--muted);
       font-size: 0.96rem;
+    }
+
+    .buffet-card p {
+      margin-top: 7px;
+      font-size: 0.84rem;
+      line-height: 1.42;
+    }
+
+    .buffet-card h3 {
+      font-size: 0.94rem;
     }
 
     .feature-card p {
@@ -575,101 +583,117 @@
 
     .buffet-showcase {
       display: grid;
-      grid-template-columns: 1.02fr 1.28fr;
+      grid-template-columns: 0.9fr 1.1fr;
       gap: 22px;
       align-items: stretch;
       margin-top: 38px;
     }
 
-    .menu-board {
-      padding: clamp(22px, 3vw, 30px);
-      border-radius: var(--radius);
-      background: var(--paper);
-      color: var(--ink);
-      box-shadow: 0 18px 42px rgba(18, 13, 6, 0.18);
-    }
-
-    .menu-board h3 {
-      margin: 0 0 22px;
-      color: var(--black);
-      font-size: 1.05rem;
-      line-height: 1.15;
-      text-transform: uppercase;
-    }
-
-    .menu-section + .menu-section {
-      margin-top: 26px;
-    }
-
-    .menu-section h4 {
-      margin: 0 0 14px;
-      color: var(--black);
-      font-size: 0.92rem;
-      text-transform: uppercase;
-    }
-
-    .menu-item + .menu-item {
-      margin-top: 14px;
-    }
-
-    .menu-item strong {
-      display: block;
-      color: var(--black);
-      font-size: 0.9rem;
-      text-transform: uppercase;
-    }
-
-    .menu-item span {
-      display: block;
-      margin-top: 2px;
-      color: rgba(28, 23, 18, 0.76);
-      font-size: 0.92rem;
-    }
-
-    .food-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .food-grid .buffet-cta-row {
-      grid-column: 1 / -1;
-    }
-
-    .food-card {
+    .buffet-summary {
       position: relative;
-      min-height: 218px;
-      overflow: hidden;
+      min-height: 100%;
+      padding: clamp(24px, 4vw, 38px);
       border-radius: var(--radius);
-      background: var(--black);
-      box-shadow: 0 14px 30px rgba(18, 13, 6, 0.2);
+      background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0)),
+        var(--black);
+      color: var(--text);
+      overflow: hidden;
+      box-shadow: 0 18px 42px rgba(18, 13, 6, 0.28);
     }
 
-    .food-card img {
+    .buffet-summary::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 46%;
+      height: 100%;
+      background: repeating-linear-gradient(135deg, rgba(244, 178, 27, 0.18) 0 8px, transparent 8px 18px);
+      clip-path: polygon(38% 0, 100% 0, 100% 100%, 0 100%);
+      pointer-events: none;
+    }
+
+    .buffet-badge {
+      position: relative;
+      display: inline-flex;
+      margin-bottom: 22px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--yellow);
+      color: #120d06;
+      font-size: 0.78rem;
+      font-weight: 950;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .buffet-summary h3 {
+      position: relative;
+      max-width: 440px;
+      margin: 0;
+      font-size: clamp(1.65rem, 3vw, 2.9rem);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .buffet-summary p {
+      position: relative;
+      max-width: 430px;
+      margin: 16px 0 0;
+      color: rgba(255, 248, 232, 0.72);
+      font-size: 1rem;
+    }
+
+    .menu-pills {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .menu-pills span {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(244, 178, 27, 0.14);
+      border: 1px solid rgba(244, 178, 27, 0.24);
+      color: var(--cream);
+      font-size: 0.78rem;
+      font-weight: 800;
+    }
+
+    .buffet-list {
+      display: grid;
+      align-content: start;
+      gap: 9px;
+    }
+
+    .buffet-card {
+      display: grid;
+      grid-template-columns: 104px minmax(0, 1fr);
+      gap: 12px;
+      align-items: stretch;
+      min-height: auto;
+      padding: 8px;
+      background: linear-gradient(90deg, rgba(8, 7, 6, 0.94), rgba(22, 17, 10, 0.9));
+      box-shadow: 0 12px 28px rgba(18, 13, 6, 0.18);
+    }
+
+    .buffet-card:nth-child(2) { margin-left: 18px; }
+    .buffet-card:nth-child(3) { margin-left: 36px; }
+
+    .buffet-card img {
       width: 100%;
       height: 100%;
-      min-height: 218px;
-      object-fit: cover;
-      transition: transform 420ms ease;
-    }
-
-    .food-card:hover img {
-      transform: scale(1.035);
-    }
-
-    .food-card figcaption {
-      position: absolute;
-      inset: auto 10px 10px;
-      padding: 10px;
+      min-height: 92px;
       border-radius: 6px;
-      background: rgba(8, 7, 6, 0.78);
-      color: var(--text);
-      backdrop-filter: blur(10px);
+      object-fit: cover;
     }
 
-    .food-card p {
-      color: rgba(255, 248, 232, 0.78);
-      font-size: 0.82rem;
+    .buffet-card div {
+      align-self: center;
+      padding: 4px 4px 4px 0;
     }
 
     #eventos .section-title {
@@ -1085,7 +1109,8 @@
       }
 
       .feature-grid {
-        gap: 18px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
       }
 
       .buffet-card:nth-child(2),
@@ -1219,6 +1244,42 @@
         padding: 18px;
       }
 
+      .feature-card {
+        min-height: 210px;
+        padding: 76px 10px 34px;
+      }
+
+      .feature-icon {
+        top: 12px;
+        width: 56px;
+        height: 56px;
+        border-width: 3px;
+      }
+
+      .feature-icon svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      .feature-card h3 {
+        font-size: 0.78rem;
+        line-height: 1.15;
+      }
+
+      .feature-card p {
+        margin-top: 8px;
+        font-size: 0.74rem;
+        line-height: 1.38;
+      }
+
+      .feature-card:last-child {
+        grid-column: 1 / -1;
+        min-height: auto;
+        padding: 76px 18px 20px;
+        clip-path: none;
+        border-radius: var(--radius);
+      }
+
       .media-panel,
       .media-panel img {
         min-height: 260px;
@@ -1230,8 +1291,12 @@
         gap: 0;
       }
 
-      .food-grid {
+      .buffet-card {
         grid-template-columns: 1fr;
+      }
+
+      .buffet-card img {
+        min-height: 160px;
       }
 
       .gallery-item.featured,
@@ -1421,64 +1486,40 @@
         </p>
 
         <div class="buffet-showcase">
-          <div class="menu-board">
-            <h3>Cardápio que surpreende</h3>
-            <div class="menu-section">
-              <h4>Entradas</h4>
-              <div class="menu-item">
-                <strong>Salada Fresh</strong>
-                <span>Mix de folhas com molho especial da casa.</span>
-              </div>
-              <div class="menu-item">
-                <strong>Mini salgados</strong>
-                <span>Coxinha, bolinha de queijo, croquete e risoles de palmito.</span>
-              </div>
-              <div class="menu-item">
-                <strong>Mini pastéis</strong>
-                <span>Mini pastel de queijo e mini pastel de carne.</span>
-              </div>
-            </div>
-            <div class="menu-section">
-              <h4>Mini burgers artesanais</h4>
-              <div class="menu-item"><strong>Burger</strong><span>Pão, carne, queijo e maionese.</span></div>
-              <div class="menu-item"><strong>Bacon</strong><span>Pão, carne, queijo, bacon e maionese.</span></div>
-              <div class="menu-item"><strong>Salad</strong><span>Pão, carne, queijo, alface, tomate e maionese.</span></div>
-              <div class="menu-item"><strong>Quarter</strong><span>Pão, carne, queijo, cebola picada, picles, ketchup e mostarda.</span></div>
-              <div class="menu-item"><strong>BLT</strong><span>Pão, carne, queijo, bacon, alface, tomate e maionese.</span></div>
-              <div class="menu-item"><strong>Melt</strong><span>Pão, carne, queijo e cebola caramelizada.</span></div>
-              <div class="menu-item"><strong>Veggie</strong><span>Pão, falafel, queijo, alface, tomate e maionese.</span></div>
-              <div class="menu-item"><strong>Batata frita</strong><span>Frita na hora, sequinha e crocante.</span></div>
+          <div class="buffet-summary">
+            <span class="buffet-badge">Comida feita na hora</span>
+            <h3>Buffet completo, equipe ativa e comida saindo quente.</h3>
+            <p>Uma operação pensada para manter fluxo, qualidade e convidados bem servidos do início ao fim.</p>
+            <div class="menu-pills" aria-label="Itens do cardápio">
+              <span>Salada Fresh</span>
+              <span>Mini salgados</span>
+              <span>Mini pastéis</span>
+              <span>Mini burgers</span>
+              <span>Batata frita</span>
             </div>
           </div>
-          <div class="food-grid" aria-label="Fotos dos itens do buffet Firebull">
-            <figure class="food-card">
-              <img src="{{ url_for('static', filename='img/snacks.jpg') }}" alt="Mini salgados e mini pastéis Firebull">
-              <figcaption>
-                <h3>Mini salgados e pastéis</h3>
-                <p>Coxinha, bolinha de queijo, risoles e pastéis.</p>
-              </figcaption>
-            </figure>
-            <figure class="food-card">
+          <div class="buffet-list" aria-label="Itens ilustrados do buffet Firebull">
+            <article class="buffet-card">
               <img src="{{ url_for('static', filename='img/burger-prep.jpg') }}" alt="Mini burgers artesanais Firebull">
-              <figcaption>
+              <div>
                 <h3>Mini burgers artesanais</h3>
-                <p>Opções burger, bacon, salad, quarter, BLT, melt e veggie.</p>
-              </figcaption>
-            </figure>
-            <figure class="food-card">
+                <p>Carne fresca, ingredientes selecionados e preparo na hora para servir burgers, bacon, salad, quarter, BLT, melt e veggie.</p>
+              </div>
+            </article>
+            <article class="buffet-card">
+              <img src="{{ url_for('static', filename='img/snacks.jpg') }}" alt="Mini salgados e mini pastéis Firebull">
+              <div>
+                <h3>Mini salgados e mini pastéis</h3>
+                <p>Coxinha, bolinha de queijo, croquete, risoles de palmito e mini pastéis de queijo e carne.</p>
+              </div>
+            </article>
+            <article class="buffet-card">
               <img src="{{ url_for('static', filename='img/fries.jpg') }}" alt="Batata frita Firebull sequinha e crocante">
-              <figcaption>
+              <div>
                 <h3>Batata frita</h3>
-                <p>Frita na hora, sequinha e crocante.</p>
-              </figcaption>
-            </figure>
-            <figure class="food-card">
-              <img src="{{ url_for('static', filename='img/IMG_7132.JPG') }}" alt="Mini burgers e batatas servidos em evento Firebull">
-              <figcaption>
-                <h3>Comida quente</h3>
-                <p>Reposição constante para manter o buffet sempre bonito.</p>
-              </figcaption>
-            </figure>
+                <p>Frita na hora, sequinha, crocante e servida com reposição constante durante o evento.</p>
+              </div>
+            </article>
             <div class="buffet-cta-row">
               <a class="button section-cta js-cta" href="#orcamento">Solicitar orçamento</a>
             </div>
@@ -1571,7 +1612,7 @@
         <div class="faq-list">
           <details class="faq-item" open>
             <summary>O que está incluso?</summary>
-            <p>Mini salgados e mini pastéis.</p>
+            <p>Salada, mini salgados, mini pastéis, mini burgers artesanais e batata frita à vontade.</p>
           </details>
           <details class="faq-item">
             <summary>Quantidade de convidados e forma de pagamento.</summary>
