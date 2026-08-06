@@ -645,24 +645,6 @@
       font-size: 1rem;
     }
 
-    .menu-pills {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 24px;
-    }
-
-    .menu-pills span {
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(244, 178, 27, 0.14);
-      border: 1px solid rgba(244, 178, 27, 0.24);
-      color: var(--cream);
-      font-size: 0.78rem;
-      font-weight: 800;
-    }
-
     .buffet-list {
       display: grid;
       align-content: start;
@@ -682,6 +664,7 @@
 
     .buffet-card:nth-child(2) { margin-left: 18px; }
     .buffet-card:nth-child(3) { margin-left: 36px; }
+    .buffet-card:nth-child(4) { margin-left: 54px; }
 
     .buffet-card img {
       width: 100%;
@@ -704,6 +687,25 @@
 
     #eventos .section-lead {
       max-width: 620px;
+    }
+
+    .event-video {
+      width: min(100%, 400px);
+      margin-top: 28px;
+      margin-inline: auto;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      background: var(--black);
+      box-shadow: 0 18px 42px rgba(18, 13, 6, 0.28);
+    }
+
+    .event-video video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .gallery {
@@ -1115,6 +1117,7 @@
 
       .buffet-card:nth-child(2),
       .buffet-card:nth-child(3),
+      .buffet-card:nth-child(4),
       .review-card:nth-child(2),
       .review-card:nth-child(3),
       .gallery-item.lift {
@@ -1490,13 +1493,6 @@
             <span class="buffet-badge">Comida feita na hora</span>
             <h3>Buffet completo, equipe ativa e comida saindo quente.</h3>
             <p>Uma operação pensada para manter fluxo, qualidade e convidados bem servidos do início ao fim.</p>
-            <div class="menu-pills" aria-label="Itens do cardápio">
-              <span>Salada Fresh</span>
-              <span>Mini salgados</span>
-              <span>Mini pastéis</span>
-              <span>Mini burgers</span>
-              <span>Batata frita</span>
-            </div>
           </div>
           <div class="buffet-list" aria-label="Itens ilustrados do buffet Firebull">
             <article class="buffet-card">
@@ -1520,6 +1516,13 @@
                 <p>Frita na hora, sequinha, crocante e servida com reposição constante durante o evento.</p>
               </div>
             </article>
+            <article class="buffet-card">
+              <img src="{{ url_for('static', filename='img/salada-fresh.jpg') }}" alt="Salada fresh Firebull montada em porções individuais">
+              <div>
+                <h3>Salada fresh</h3>
+                <p>Folhas frescas e crocantes com molho da casa, montadas em porções individuais e servidas na hora.</p>
+              </div>
+            </article>
             <div class="buffet-cta-row">
               <a class="button section-cta js-cta" href="#orcamento">Solicitar orçamento</a>
             </div>
@@ -1536,27 +1539,17 @@
           Desde pequenas celebrações até grandes eventos, a Firebull adapta estrutura, equipe e operação para que tudo aconteça exatamente como você imaginou.
         </p>
 
-        <div class="gallery" aria-label="Fotos da operação Firebull em eventos">
-          <figure class="gallery-item featured">
-            <img src="{{ url_for('static', filename='img/event-service.jpg') }}" alt="Equipe Firebull servindo convidados durante evento">
-            <figcaption class="gallery-label">Eventos particulares</figcaption>
-          </figure>
-          <figure class="gallery-item wide">
-            <img src="{{ url_for('static', filename='img/carne.JPG') }}" alt="Carne artesanal Firebull ainda crua na chapa">
-            <figcaption class="gallery-label">Preparo na hora</figcaption>
-          </figure>
-          <figure class="gallery-item">
-            <img src="{{ url_for('static', filename='img/snacks.jpg') }}" alt="Mini salgados e mini pastéis em bandejas para evento">
-            <figcaption class="gallery-label">Salgados e pastéis</figcaption>
-          </figure>
-          <figure class="gallery-item lift">
-            <img src="{{ url_for('static', filename='img/fries.jpg') }}" alt="Batatas fritas crocantes servidas em porções individuais">
-            <figcaption class="gallery-label">Batatas crocantes</figcaption>
-          </figure>
-          <figure class="gallery-item wide">
-            <img src="{{ url_for('static', filename='img/truck.jpg') }}" alt="Food truck Firebull pronto para atender eventos">
-            <figcaption class="gallery-label">Estrutura no local</figcaption>
-          </figure>
+        <div class="event-video">
+          <video
+            src="{{ url_for('static', filename='video/firebull-eventos.mp4') }}"
+            poster="{{ url_for('static', filename='img/firebull-eventos-poster.jpg') }}"
+            preload="metadata"
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+            aria-label="Vídeo da operação Firebull em eventos"></video>
         </div>
       </div>
     </section>
@@ -1638,7 +1631,7 @@
       <div class="container">
         <div class="cta-card">
           <div class="cta-image">
-            <img src="{{ url_for('static', filename='img/Firebull Burguer- 223-3499.jpg') }}" alt="Mini burgers Firebull servidos no evento">
+            <img src="{{ url_for('static', filename='img/mini-burguer.jpg') }}" alt="Mini hambúrguer artesanal Firebull">
           </div>
           <div class="form-panel">
             <p class="eyebrow">Comece pelo orçamento</p>
