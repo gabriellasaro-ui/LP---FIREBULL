@@ -1,21 +1,27 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <!-- Google Tag Manager -->
   <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M6G29MB5');
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-M6G29MB5');
   </script>
   <!-- End Google Tag Manager -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Buffet de Mini-Hamburguer para Eventos | Firebull</title>
-  <meta name="description" content="Leve a Firebull para seu evento com mini-hambúrgueres artesanais, batatas crocantes, salgados, equipe treinada e buffet completo.">
+  <meta name="description"
+    content="Leve a Firebull para seu evento com mini-hambúrgueres artesanais, batatas crocantes, salgados, equipe treinada e buffet completo.">
   <meta property="og:title" content="Leve o verdadeiro mini burguer artesanal para seu evento">
-  <meta property="og:description" content="Mini-hambúrgueres artesanais preparados na hora e uma operação completa para eventos de todos os tamanhos.">
+  <meta property="og:description"
+    content="Mini-hambúrgueres artesanais preparados na hora e uma operação completa para eventos de todos os tamanhos.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="{{ url_for('static', filename='img/hero pc.png') }}">
   <meta name="theme-color" content="#080706">
@@ -39,9 +45,13 @@
       --max: 1160px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -53,11 +63,19 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    img, picture { display: block; max-width: 100%; }
+    img,
+    picture {
+      display: block;
+      max-width: 100%;
+    }
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+    }
 
-    button, input, select {
+    button,
+    input,
+    select {
       font: inherit;
     }
 
@@ -78,7 +96,9 @@
         var(--black);
     }
 
-    .section-coal { background: var(--coal); }
+    .section-coal {
+      background: var(--coal);
+    }
 
     .section-yellow {
       background:
@@ -224,7 +244,9 @@
       box-shadow: 0 16px 34px rgba(244, 178, 27, 0.26), inset 0 1px 0 rgba(255, 255, 255, 0.34);
     }
 
-    .button-primary:hover { filter: brightness(1.06); }
+    .button-primary:hover {
+      filter: brightness(1.06);
+    }
 
     .section-cta {
       display: inline-flex;
@@ -278,7 +300,9 @@
         linear-gradient(180deg, rgba(8, 7, 6, 0.08), rgba(8, 7, 6, 0.48));
     }
 
-    .hero-media { z-index: -2; }
+    .hero-media {
+      z-index: -2;
+    }
 
     .hero-nav {
       position: relative;
@@ -416,8 +440,13 @@
     }
 
     @keyframes scroll {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     .split {
@@ -662,9 +691,17 @@
       box-shadow: 0 12px 28px rgba(18, 13, 6, 0.18);
     }
 
-    .buffet-card:nth-child(2) { margin-left: 18px; }
-    .buffet-card:nth-child(3) { margin-left: 36px; }
-    .buffet-card:nth-child(4) { margin-left: 54px; }
+    .buffet-card:nth-child(2) {
+      margin-left: 18px;
+    }
+
+    .buffet-card:nth-child(3) {
+      margin-left: 36px;
+    }
+
+    .buffet-card:nth-child(4) {
+      margin-left: 54px;
+    }
 
     .buffet-card img {
       width: 100%;
@@ -736,10 +773,21 @@
       box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07);
     }
 
-    .gallery-item.featured { grid-row: span 2; }
-    .gallery-item.wide { grid-column: span 1; }
-    .gallery-item.panorama { grid-column: span 2; }
-    .gallery-item.lift { transform: none; }
+    .gallery-item.featured {
+      grid-row: span 2;
+    }
+
+    .gallery-item.wide {
+      grid-column: span 1;
+    }
+
+    .gallery-item.panorama {
+      grid-column: span 2;
+    }
+
+    .gallery-item.lift {
+      transform: none;
+    }
 
     .gallery-item img {
       width: 100%;
@@ -748,7 +796,9 @@
       transition: transform 420ms ease;
     }
 
-    .gallery-item:hover img { transform: scale(1.035); }
+    .gallery-item:hover img {
+      transform: scale(1.035);
+    }
 
     .gallery-label {
       position: absolute;
@@ -769,9 +819,8 @@
       min-height: 620px;
       display: grid;
       align-items: center;
-      background:
-        linear-gradient(90deg, rgba(8, 7, 6, 0.94), rgba(8, 7, 6, 0.66) 54%, rgba(8, 7, 6, 0.28)),
-        url("{{ url_for('static', filename='img/event-service.jpg') }}") center / cover no-repeat;
+      background: linear-gradient(90deg, rgba(8, 7, 6, 0.94), rgba(8, 7, 6, 0.66) 54%, rgba(8, 7, 6, 0.28)),
+      url("{{ url_for('static', filename='img/event-service.jpg') }}") center / cover no-repeat;
     }
 
     .quote-band .section-title {
@@ -1016,7 +1065,9 @@
       letter-spacing: 0.02em;
     }
 
-    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
 
     .faq-item summary::after {
       content: "+";
@@ -1025,7 +1076,9 @@
       line-height: 1;
     }
 
-    .faq-item[open] summary::after { content: "-"; }
+    .faq-item[open] summary::after {
+      content: "-";
+    }
 
     .faq-item p {
       margin: 0;
@@ -1093,6 +1146,7 @@
     }
 
     @media (max-width: 940px) {
+
       .split,
       .faq,
       .proof-layout,
@@ -1150,6 +1204,7 @@
     }
 
     @media (max-width: 680px) {
+
       .container,
       .hero-nav,
       .hero-content {
@@ -1316,9 +1371,8 @@
         align-items: end;
         padding-top: 180px;
         padding-bottom: 54px;
-        background:
-          linear-gradient(180deg, rgba(8, 7, 6, 0.42), rgba(8, 7, 6, 0.95) 70%),
-          url("{{ url_for('static', filename='img/event-service.jpg') }}") center / cover no-repeat;
+        background: linear-gradient(180deg, rgba(8, 7, 6, 0.42), rgba(8, 7, 6, 0.95) 70%),
+        url("{{ url_for('static', filename='img/event-service.jpg') }}") center / cover no-repeat;
       }
 
       .form-panel {
@@ -1352,10 +1406,11 @@
     }
   </style>
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6G29MB5"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6G29MB5" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
   <header class="hero" id="top">
@@ -1381,7 +1436,8 @@
           <span class="hero-brand">para seu evento</span>
         </h1>
         <p class="hero-subtitle">
-          Mini-hambúrgueres artesanais preparados na hora, batatas sempre crocantes e uma operação pronta para fazer seu evento acontecer com muito sucesso.
+          Mini-hambúrgueres artesanais preparados na hora, batatas sempre crocantes e uma operação pronta para fazer seu
+          evento acontecer com muito sucesso.
         </p>
         <div class="hero-actions">
           <a class="button button-primary js-cta" href="#orcamento">Quero meu orçamento</a>
@@ -1408,16 +1464,46 @@
   <main>
     <div class="marquee" aria-label="Diferenciais Firebull">
       <div class="marquee-track">
-        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Mini-hambúrguer artesanal</span>
-        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Batata sempre crocante</span>
-        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Equipe treinada</span>
-        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Estrutura completa</span>
-        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Atendimento ágil</span>
-        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Mini-hambúrguer artesanal</span>
-        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Batata sempre crocante</span>
-        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Equipe treinada</span>
-        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Estrutura completa</span>
-        <span><svg viewBox="0 0 32 24" aria-hidden="true"><path fill="currentColor" d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z"/></svg>Atendimento ágil</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z" />
+          </svg>Mini-hambúrguer artesanal</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z" />
+          </svg>Batata sempre crocante</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z" />
+          </svg>Equipe treinada</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z" />
+          </svg>Estrutura completa</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z" />
+          </svg>Atendimento ágil</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z" />
+          </svg>Mini-hambúrguer artesanal</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z" />
+          </svg>Batata sempre crocante</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z" />
+          </svg>Equipe treinada</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z" />
+          </svg>Estrutura completa</span>
+        <span><svg viewBox="0 0 32 24" aria-hidden="true">
+            <path fill="currentColor"
+              d="M4 10.5C5 4.8 10 2 16 2s11 2.8 12 8.5H4Zm1.5 3h21a2 2 0 0 1 0 4h-21a2 2 0 0 1 0-4Zm1.5 7h18a1.5 1.5 0 0 1 0 3H7a1.5 1.5 0 0 1 0-3Z" />
+          </svg>Atendimento ágil</span>
       </div>
     </div>
 
@@ -1428,11 +1514,13 @@
             <p class="eyebrow">Uma hamburgueria no seu evento</p>
             <h2 class="section-title" id="operacao-title">Levamos uma hamburgueria completa para o seu evento.</h2>
             <p class="section-lead">
-              Preparamos os hambúrgueres, montamos toda a estrutura, levamos a equipe e servimos seus convidados com qualidade, agilidade e organização.
+              Preparamos os hambúrgueres, montamos toda a estrutura, levamos a equipe e servimos seus convidados com
+              qualidade, agilidade e organização.
             </p>
           </div>
           <div class="media-panel">
-            <img src="{{ url_for('static', filename='img/team-service.jpg') }}" alt="Equipe Firebull servindo mini-hambúrgueres e batatas em evento">
+            <img src="{{ url_for('static', filename='img/team-service.jpg') }}"
+              alt="Equipe Firebull servindo mini-hambúrgueres e batatas em evento">
             <div class="media-caption">
               <strong>Operação completa</strong>
               <span>Da montagem ao último convidado servido.</span>
@@ -1443,38 +1531,69 @@
         <div class="feature-grid">
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3l1.7 3.4 3.8.6-2.8 2.7.7 3.8L12 11.7l-3.4 1.8.7-3.8L6.5 7l3.8-.6L12 3Z"></path><path d="M5.2 12.8a6 6 0 0 0 13.6 0"></path><path d="M9 20h6"></path></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3l1.7 3.4 3.8.6-2.8 2.7.7 3.8L12 11.7l-3.4 1.8.7-3.8L6.5 7l3.8-.6L12 3Z"></path>
+                <path d="M5.2 12.8a6 6 0 0 0 13.6 0"></path>
+                <path d="M9 20h6"></path>
+              </svg>
             </div>
             <h3>Experiência</h3>
-            <p>Mais de <strong>10 anos de experiência</strong> em eventos de todos os tipos e tamanhos, com profissionalismo e um <strong>padrão de atendimento que encanta.</strong></p>
+            <p>Mais de <strong>10 anos de experiência</strong> em eventos de todos os tipos e tamanhos, com
+              profissionalismo e um <strong>padrão de atendimento que encanta.</strong></p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 11.5C4.8 7.2 8 5 12 5s7.2 2.2 8 6.5H4Z"></path><path d="M5 14h14a1.7 1.7 0 0 1 0 3.4H5A1.7 1.7 0 0 1 5 14Z"></path><path d="M6.5 20h11"></path><path d="M8 8h.01M12 8h.01M16 8h.01"></path></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M4 11.5C4.8 7.2 8 5 12 5s7.2 2.2 8 6.5H4Z"></path>
+                <path d="M5 14h14a1.7 1.7 0 0 1 0 3.4H5A1.7 1.7 0 0 1 5 14Z"></path>
+                <path d="M6.5 20h11"></path>
+                <path d="M8 8h.01M12 8h.01M16 8h.01"></path>
+              </svg>
             </div>
             <h3>Qualidade sem enganação</h3>
-            <p>Mini-hambúrgueres preparados com <strong>carne fresca e ingredientes selecionados</strong>, garantindo sabor de verdade.</p>
+            <p>Mini-hambúrgueres preparados com <strong>carne fresca e ingredientes selecionados</strong>, garantindo
+              sabor de verdade.</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M3 7h11v8H3z"></path><path d="M14 10h4l3 3v2h-7z"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle><path d="M6 4h5"></path></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M3 7h11v8H3z"></path>
+                <path d="M14 10h4l3 3v2h-7z"></path>
+                <circle cx="7" cy="18" r="2"></circle>
+                <circle cx="17" cy="18" r="2"></circle>
+                <path d="M6 4h5"></path>
+              </svg>
             </div>
             <h3>Logística versátil</h3>
-            <p>Seu evento com nossos <strong>food trucks</strong> ou uma <strong>estação completa</strong> em salões de festas, áreas gourmet e churrasqueiras.</p>
+            <p>Seu evento com nossos <strong>food trucks</strong> ou uma <strong>estação completa</strong> em salões de
+              festas, áreas gourmet e churrasqueiras.</p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-8 0"></path><path d="M3 20a7 7 0 0 1 18 0"></path><path d="M19 8a3 3 0 0 1 0 6"></path><path d="M5 8a3 3 0 0 0 0 6"></path></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M16 11a4 4 0 1 0-8 0"></path>
+                <path d="M3 20a7 7 0 0 1 18 0"></path>
+                <path d="M19 8a3 3 0 0 1 0 6"></path>
+                <path d="M5 8a3 3 0 0 0 0 6"></path>
+              </svg>
             </div>
             <h3>Equipe profissional</h3>
-            <p><strong>Equipe profissional, treinada e uniformizada</strong>, com garçons dedicados para um <strong>atendimento ágil e de alto padrão</strong>.</p>
+            <p><strong>Equipe profissional, treinada e uniformizada</strong>, com garçons dedicados para um
+              <strong>atendimento ágil e de alto padrão</strong>.
+            </p>
           </article>
           <article class="feature-card">
             <div class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3v18"></path><path d="M3 12h18"></path><circle cx="12" cy="12" r="8"></circle></svg>
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3v18"></path>
+                <path d="M3 12h18"></path>
+                <circle cx="12" cy="12" r="8"></circle>
+              </svg>
             </div>
             <h3>Segurança</h3>
-            <p>Documentação exigida pela <strong>Vigilância Sanitária</strong>, equipe treinada e operação com foco em <strong>higiene e segurança.</strong></p>
+            <p>Documentação exigida pela <strong>Vigilância Sanitária</strong>, equipe treinada e operação com foco em
+              <strong>higiene e segurança.</strong>
+            </p>
           </article>
         </div>
       </div>
@@ -1485,7 +1604,8 @@
         <p class="eyebrow">Buffet sem pausa, sem improviso</p>
         <h2 class="section-title" id="buffet-title"><span>BUFFET COMPLETO</span> PARA O SEU EVENTO</h2>
         <p class="section-lead">
-          Um cardápio completo, feito com ingredientes frescos, reposição constante e comida saindo quente para seus convidados.
+          Um cardápio completo, feito com ingredientes frescos, reposição constante e comida saindo quente para seus
+          convidados.
         </p>
 
         <div class="buffet-showcase">
@@ -1496,10 +1616,12 @@
           </div>
           <div class="buffet-list" aria-label="Itens ilustrados do buffet Firebull">
             <article class="buffet-card">
-              <img src="{{ url_for('static', filename='img/mini-burguer.jpg') }}" alt="Mini burgers artesanais Firebull">
+              <img src="{{ url_for('static', filename='img/mini-burguer.jpg') }}"
+                alt="Mini burgers artesanais Firebull">
               <div>
                 <h3>Mini burgers artesanais</h3>
-                <p>Carne fresca, ingredientes selecionados e preparo na hora para servir burgers, bacon, salad, quarter, BLT, melt e veggie.</p>
+                <p>Carne fresca, ingredientes selecionados e preparo na hora para servir burgers, bacon, salad, quarter,
+                  BLT, melt e veggie.</p>
               </div>
             </article>
             <article class="buffet-card">
@@ -1510,14 +1632,16 @@
               </div>
             </article>
             <article class="buffet-card">
-              <img src="{{ url_for('static', filename='img/fries.jpg') }}" alt="Batata frita Firebull sequinha e crocante">
+              <img src="{{ url_for('static', filename='img/fries.jpg') }}"
+                alt="Batata frita Firebull sequinha e crocante">
               <div>
                 <h3>Batata frita</h3>
                 <p>Frita na hora, sequinha, crocante e servida com reposição constante durante o evento.</p>
               </div>
             </article>
             <article class="buffet-card">
-              <img src="{{ url_for('static', filename='img/salada-fresh.jpg') }}" alt="Salada fresh Firebull montada em porções individuais">
+              <img src="{{ url_for('static', filename='img/salada-fresh.jpg') }}"
+                alt="Salada fresh Firebull montada em porções individuais">
               <div>
                 <h3>Salada fresh</h3>
                 <p>Folhas frescas e crocantes com molho da casa, montadas em porções individuais e servidas na hora.</p>
@@ -1536,20 +1660,14 @@
         <p class="eyebrow">Eventos de Todos os Tipos</p>
         <h2 class="section-title" id="eventos-title">Um evento único pede uma operação única.</h2>
         <p class="section-lead">
-          Desde pequenas celebrações até grandes eventos, a Firebull adapta estrutura, equipe e operação para que tudo aconteça exatamente como você imaginou.
+          Desde pequenas celebrações até grandes eventos, a Firebull adapta estrutura, equipe e operação para que tudo
+          aconteça exatamente como você imaginou.
         </p>
 
         <div class="event-video">
-          <video
-            src="{{ url_for('static', filename='video/firebull-eventos.mp4') }}"
-            poster="{{ url_for('static', filename='img/firebull-eventos-poster.jpg') }}"
-            preload="metadata"
-            autoplay
-            muted
-            loop
-            playsinline
-            controls
-            aria-label="Vídeo da operação Firebull em eventos"></video>
+          <video src="{{ url_for('static', filename='video/firebull-eventos.mp4') }}"
+            poster="{{ url_for('static', filename='img/firebull-eventos-poster.jpg') }}" preload="metadata" autoplay
+            muted loop playsinline controls aria-label="Vídeo da operação Firebull em eventos"></video>
         </div>
       </div>
     </section>
@@ -1559,26 +1677,33 @@
         <p class="eyebrow">Quem prova, recomenda</p>
         <h2 class="section-title" id="prova-title">Sabor, organização e atendimento no mesmo nível.</h2>
         <p class="section-lead">
-          A experiência precisa ser boa para quem contrata e para quem está na festa. Por isso a Firebull une operação, equipe e comida feita de verdade.
+          A experiência precisa ser boa para quem contrata e para quem está na festa. Por isso a Firebull une operação,
+          equipe e comida feita de verdade.
         </p>
         <div class="proof-layout">
           <div class="proof-photo">
-          <img src="{{ url_for('static', filename='img/IMG_7132.JPG') }}" alt="Mini-hambúrgueres e batatas Firebull servidos em evento">
+            <img src="{{ url_for('static', filename='img/IMG_7132.JPG') }}"
+              alt="Mini-hambúrgueres e batatas Firebull servidos em evento">
           </div>
           <div class="review-stack">
             <article class="review-card">
               <div class="stars" aria-label="5 estrelas">★★★★★</div>
-              <p>“Contatei a Priscila em cima da hora para um evento, ela conseguiu me atender superando minhas expectativas. O lanche é maravilhoso, qualidade impecável e o atendimento e cuidado surpreenderam. Recomendo tranquilamente para qualquer evento.”</p>
+              <p>“Contatei a Priscila em cima da hora para um evento, ela conseguiu me atender superando minhas
+                expectativas. O lanche é maravilhoso, qualidade impecável e o atendimento e cuidado surpreenderam.
+                Recomendo tranquilamente para qualquer evento.”</p>
               <strong>Ligia O. Kratschmer</strong>
             </article>
             <article class="review-card">
               <div class="stars" aria-label="5 estrelas">★★★★★</div>
-              <p>“Um dos melhores lanches que já provei, atendeu nosso evento com uma equipe TOP, super pontuais, zero problemas, Priscila super atenciosa... Recomendo DEMAIS!!!!”</p>
+              <p>“Um dos melhores lanches que já provei, atendeu nosso evento com uma equipe TOP, super pontuais, zero
+                problemas, Priscila super atenciosa... Recomendo DEMAIS!!!!”</p>
               <strong>Joeci Silva</strong>
             </article>
             <article class="review-card">
               <div class="stars" aria-label="5 estrelas">★★★★★</div>
-              <p>“Sempre contrato para eventos em Campinas e sempre faz muito sucesso! Os hambúrgueres são incríveis, carne muito saborosa e bem temperada. Organização impecável e atendimento excelente. Recomendo para quem quer um Food Truck de qualidade para eventos.”</p>
+              <p>“Sempre contrato para eventos em Campinas e sempre faz muito sucesso! Os hambúrgueres são incríveis,
+                carne muito saborosa e bem temperada. Organização impecável e atendimento excelente. Recomendo para quem
+                quer um Food Truck de qualidade para eventos.”</p>
               <strong>Michelle Silva</strong>
             </article>
           </div>
@@ -1589,9 +1714,11 @@
     <section class="section quote-band" id="momentos" aria-labelledby="momentos-title">
       <div class="container">
         <p class="eyebrow">A parte que todo mundo comenta depois</p>
-        <h2 class="section-title" id="momentos-title">Mais do que servir hambúrgueres. Criamos momentos inesquecíveis.</h2>
+        <h2 class="section-title" id="momentos-title">Mais do que servir hambúrgueres. Criamos momentos inesquecíveis.
+        </h2>
         <p class="section-lead">
-          A Firebull transforma a alimentação em um dos momentos mais marcantes da celebração, reunindo sabor, experiência e boas lembranças em cada detalhe.
+          A Firebull transforma a alimentação em um dos momentos mais marcantes da celebração, reunindo sabor,
+          experiência e boas lembranças em cada detalhe.
         </p>
       </div>
     </section>
@@ -1609,7 +1736,8 @@
           </details>
           <details class="faq-item">
             <summary>Qual a quantidade de convidados e forma de pagamento?</summary>
-            <p>Atendemos a partir de 30 pagantes. O orçamento varia conforme a quantidade de convidados e o formato do evento. As formas de pagamento são alinhadas na proposta.</p>
+            <p>Atendemos a partir de 30 pagantes. O orçamento varia conforme a quantidade de convidados e o formato do
+              evento. As formas de pagamento são alinhadas na proposta.</p>
           </details>
           <details class="faq-item">
             <summary>Vocês levam equipe?</summary>
@@ -1631,11 +1759,13 @@
       <div class="container">
         <div class="cta-card">
           <div class="cta-image">
-            <img src="{{ url_for('static', filename='img/mini-burguer.jpg') }}" alt="Mini hambúrguer artesanal Firebull">
+            <img src="{{ url_for('static', filename='img/mini-burguer.png') }}"
+              alt="Mini hambúrguer artesanal Firebull">
           </div>
           <div class="form-panel">
             <p class="eyebrow">Comece pelo orçamento</p>
-            <h2 class="section-title" id="orcamento-title">Solicite um orçamento personalizado e comece a planejar um evento inesquecível.</h2>
+            <h2 class="section-title" id="orcamento-title">Solicite um orçamento personalizado e comece a planejar um
+              evento inesquecível.</h2>
             <p class="section-lead">
               Envie os dados principais do seu evento e fale com a Firebull pelo WhatsApp.
             </p>
@@ -1647,7 +1777,8 @@
               </div>
               <div class="field">
                 <label for="phone">WhatsApp</label>
-                <input id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000" required>
+                <input id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000"
+                  required>
               </div>
               <div class="field">
                 <label for="guests">Quantidade de convidados</label>
@@ -1682,7 +1813,9 @@
         </div>
       </div>
       <span class="footer-credit">Produzido por V4 Company Lisboa & Co</span>
-      <a class="js-cta" href="https://wa.me/5519989710823?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20evento%20com%20a%20Firebull." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
+      <a class="js-cta"
+        href="https://wa.me/5519989710823?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20evento%20com%20a%20Firebull."
+        target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
     </div>
   </footer>
 
@@ -1731,4 +1864,5 @@
     })();
   </script>
 </body>
+
 </html>
