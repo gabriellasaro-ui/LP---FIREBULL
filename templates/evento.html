@@ -1874,6 +1874,24 @@
         window.trackCTA("formulario_orcamento");
 
         const data = new FormData(form);
+
+        const payload = {
+          name: data.get("name") || "",
+          phone: data.get("phone") || "",
+          guests: data.get("guests") || "",
+          eventType: data.get("event-type") || "",
+          utms: utms || "",
+          pageUrl: window.location.href
+        };
+
+        fetch("https://hook.us1.make.celonis.com/yr7bt15p3geermm55r3cewdz46qifds8", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(payload)
+        }).catch(err => console.error("Erro ao enviar webhook:", err));
+
         const message = [
           "Olá, vim pela landing page da Firebull e quero um orçamento personalizado.",
           "",
