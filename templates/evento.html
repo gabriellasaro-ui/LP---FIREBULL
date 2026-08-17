@@ -1820,6 +1820,22 @@
                   <option value="Outro">Outro</option>
                 </select>
               </div>
+              <input type="hidden" name="gclid">
+              <input type="hidden" name="gbraid">
+              <input type="hidden" name="wbraid">
+              <input type="hidden" name="fbclid">
+              <input type="hidden" name="ttclid">
+              <input type="hidden" name="event_id">
+              <input type="hidden" name="external_id">
+              <input type="hidden" name="_fbp">
+              <input type="hidden" name="_fbc">
+              <input type="hidden" name="_gcl_au">
+              <input type="hidden" name="client_user_agent">
+              <input type="hidden" name="utm_source">
+              <input type="hidden" name="utm_medium">
+              <input type="hidden" name="utm_campaign">
+              <input type="hidden" name="utm_content">
+              <input type="hidden" name="utm_term">
               <button class="button button-primary js-cta" type="submit">Continuar no WhatsApp</button>
             </form>
             <p class="form-note">Ao enviar, você será direcionado para o WhatsApp com a mensagem pronta.</p>
@@ -1839,13 +1855,62 @@
         </div>
       </div>
       <span class="footer-credit">Produzido por V4 Company Lisboa & Co</span>
-      <a class="js-cta"
-        href="https://wa.me/5519989710823?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20para%20evento%20com%20a%20Firebull."
-        target="_blank" rel="noopener noreferrer">Chamar no WhatsApp</a>
     </div>
   </footer>
 
   <script>
+    // 1. Captura parâmetros da URL ou recupera do localStorage (para não perder o rastro se ele navegar pelo site)
+    function getFirebullParam(name) {
+      return new URLSearchParams(window.location.search).get(name) || localStorage.getItem('fb_track_' + name) || "";
+    }
+
+    function getFirebullCookie(name) {
+      let value = "; " + document.cookie;
+      let parts = value.split("; " + name + "=");
+      if (parts.length === 2) return parts.pop().split(";").shift();
+      return "";
+    }
+
+    // 2. Guarda os dados de tráfego pago assim que o cliente entra na LP
+    const firebullParams = ['gclid', 'gbraid', 'wbraid', 'fbclid', 'ttclid', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
+    firebullParams.forEach(param => {
+      let value = new URLSearchParams(window.location.search).get(param);
+      if (value) localStorage.setItem('fb_track_' + param, value);
+    });
+
+    // 3. Injeta as informações ocultas no formulário assim que a página carregar
+    window.addEventListener('DOMContentLoaded', () => {
+      // Cria um código único de identificação para o evento do buffet (ex: ev_1715421..._firebull)
+      const firebullEventId = 'ev_' + Date.now() + '_' + Math.random().toString(36).substr(2, 5) + '_firebull';
+      
+      const trackingData = {
+        'gclid': getFirebullParam('gclid'),
+        'gbraid': getFirebullParam('gbraid'),
+        'wbraid': getFirebullParam('wbraid'),
+        'fbclid': getFirebullParam('fbclid'),
+        'ttclid': getFirebullParam('ttclid'),
+        'utm_source': getFirebullParam('utm_source'),
+        'utm_medium': getFirebullParam('utm_medium'),
+        'utm_campaign': getFirebullParam('utm_campaign'),
+        'utm_content': getFirebullParam('utm_content'),
+        'utm_term': getFirebullParam('utm_term'),
+        'event_id': firebullEventId,
+        'external_id': firebullEventId,
+        '_fbp': getFirebullCookie('_fbp'),
+        '_fbc': getFirebullCookie('_fbc'),
+        '_gcl_au': getFirebullCookie('_gcl_au'),
+        'client_user_agent': navigator.userAgent
+      };
+
+      // Procura os campos ocultos do formulário e preenche automaticamente
+      Object.keys(trackingData).forEach(key => {
+        let field = document.querySelector(`input[name="${key}"]`);
+        if (field) {
+          field.value = trackingData[key];
+        }
+      });
+    });
+
     (function () {
       const whatsappNumber = "5519989710823";
       const params = new URLSearchParams(window.location.search);
@@ -1881,7 +1946,23 @@
           guests: data.get("guests") || "",
           eventType: data.get("event-type") || "",
           utms: utms || "",
-          pageUrl: window.location.href
+          pageUrl: window.location.href,
+          gclid: data.get("gclid") || "",
+          gbraid: data.get("gbraid") || "",
+          wbraid: data.get("wbraid") || "",
+          fbclid: data.get("fbclid") || "",
+          ttclid: data.get("ttclid") || "",
+          event_id: data.get("event_id") || "",
+          external_id: data.get("external_id") || "",
+          _fbp: data.get("_fbp") || "",
+          _fbc: data.get("_fbc") || "",
+          _gcl_au: data.get("_gcl_au") || "",
+          client_user_agent: data.get("client_user_agent") || "",
+          utm_source: data.get("utm_source") || "",
+          utm_medium: data.get("utm_medium") || "",
+          utm_campaign: data.get("utm_campaign") || "",
+          utm_content: data.get("utm_content") || "",
+          utm_term: data.get("utm_term") || ""
         };
 
         fetch("https://hook.us1.make.celonis.com/yr7bt15p3geermm55r3cewdz46qifds8", {
