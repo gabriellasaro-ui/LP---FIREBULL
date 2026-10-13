@@ -1965,13 +1965,27 @@
           utm_term: data.get("utm_term") || ""
         };
 
-        fetch("https://hook.us1.make.celonis.com/yr7bt15p3geermm55r3cewdz46qifds8", {
+        // Envia o mesmo payload para Make e n8n em paralelo, sem bloquear o redirecionamento para o WhatsApp
+        const webhooks = [
+          "https://hook.us1.make.celonis.com/yr7bt15p3geermm55r3cewdz46qifds8",
+          "https://n8n.v4lisboatech.com.br/webhook/firebull-lp-kommo-lead"
+        ];
+        const body = JSON.stringify(payload);
+
+        Promise.allSettled(webhooks.map((url) => fetch(url, {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
-          body: JSON.stringify(payload)
-        }).catch(err => console.error("Erro ao enviar webhook:", err));
+          body,
+          keepalive: true
+        }))).then((results) => {
+          results.forEach((result, i) => {
+            if (result.status === "rejected") {
+              console.error("Erro ao enviar webhook:", webhooks[i], result.reason);
+            }
+          });
+        });
 
         const message = [
           "Olá, vim pela landing page da Firebull e quero um orçamento personalizado.",
