@@ -962,8 +962,7 @@
       margin-top: 22px;
     }
 
-    .event-form .button,
-    .event-form .field-full {
+    .event-form .button {
       grid-column: 1 / -1;
     }
 
@@ -994,10 +993,6 @@
       background: rgba(8, 7, 6, 0.36);
       color: var(--text);
       outline: none;
-    }
-
-    .field input[type="date"] {
-      color-scheme: dark;
     }
 
     .field select option {
@@ -1811,18 +1806,6 @@
                 <input id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(00) 00000-0000"
                   required>
               </div>
-              <div class="field field-full">
-                <label for="email">E-mail</label>
-                <input id="email" name="email" type="email" autocomplete="email" placeholder="seuemail@exemplo.com">
-              </div>
-              <div class="field">
-                <label for="event-date">Data do evento</label>
-                <input id="event-date" name="event-date" type="date">
-              </div>
-              <div class="field">
-                <label for="city">Cidade do evento</label>
-                <input id="city" name="city" autocomplete="address-level2" placeholder="Ex: Campinas">
-              </div>
               <div class="field">
                 <label for="guests">Quantidade de convidados</label>
                 <input id="guests" name="guests" inputmode="numeric" placeholder="Ex: 80 convidados">
@@ -1962,9 +1945,6 @@
           phone: data.get("phone") || "",
           guests: data.get("guests") || "",
           eventType: data.get("event-type") || "",
-          eventDate: data.get("event-date") || "",
-          city: data.get("city") || "",
-          email: data.get("email") || "",
           utms: utms || "",
           pageUrl: window.location.href,
           gclid: data.get("gclid") || "",
