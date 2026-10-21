@@ -23,9 +23,9 @@
   <meta property="og:description"
     content="Mini-hambúrgueres artesanais preparados na hora e uma operação completa para eventos de todos os tamanhos.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="{{ url_for('static', filename='img/hero pc.png') }}">
+  <meta property="og:image" content="/static/img/hero%20pc.png">
   <meta name="theme-color" content="#080706">
-  <link rel="icon" href="{{ url_for('static', filename='img/firebull-logo.png') }}">
+  <link rel="icon" href="/static/img/firebull-logo.png">
   <script src="/static/tracking.js" defer></script>
   <style>
     :root {
@@ -820,7 +820,7 @@
       display: grid;
       align-items: center;
       background: linear-gradient(90deg, rgba(8, 7, 6, 0.94), rgba(8, 7, 6, 0.66) 54%, rgba(8, 7, 6, 0.28)),
-      url("{{ url_for('static', filename='img/event-service.jpg') }}") center / cover no-repeat;
+      url("/static/img/event-service.jpg") center / cover no-repeat;
     }
 
     .quote-band .section-title {
@@ -1399,7 +1399,7 @@
         padding-top: 180px;
         padding-bottom: 54px;
         background: linear-gradient(180deg, rgba(8, 7, 6, 0.42), rgba(8, 7, 6, 0.95) 70%),
-        url("{{ url_for('static', filename='img/event-service.jpg') }}") center / cover no-repeat;
+        url("/static/img/event-service.jpg") center / cover no-repeat;
       }
 
       .form-panel {
@@ -1442,14 +1442,14 @@
 
   <header class="hero" id="top">
     <picture class="hero-media" aria-hidden="true">
-      <source media="(max-width: 680px)" srcset="{{ url_for('static', filename='img/hero mobile.png') }}">
-      <img src="{{ url_for('static', filename='img/hero pc.png') }}" alt="">
+      <source media="(max-width: 680px)" srcset="/static/img/hero%20mobile.png">
+      <img src="/static/img/hero%20pc.png" alt="">
     </picture>
     <div class="hero-overlay" aria-hidden="true"></div>
 
     <nav class="hero-nav" aria-label="Navegação principal">
       <a class="brand" href="#top" aria-label="Firebull">
-        <img src="{{ url_for('static', filename='img/firebull-wordmark.svg') }}" alt="Firebull">
+        <img src="/static/img/firebull-wordmark.svg" alt="Firebull">
       </a>
       <a class="button js-cta" href="#orcamento">Solicitar orçamento</a>
     </nav>
@@ -1546,7 +1546,7 @@
             </p>
           </div>
           <div class="media-panel">
-            <img src="{{ url_for('static', filename='img/team-service.jpg') }}"
+            <img src="/static/img/team-service.jpg"
               alt="Equipe Firebull servindo mini-hambúrgueres e batatas em evento">
             <div class="media-caption">
               <strong>Operação completa</strong>
@@ -1643,7 +1643,7 @@
           </div>
           <div class="buffet-list" aria-label="Itens ilustrados do buffet Firebull">
             <article class="buffet-card">
-              <img src="{{ url_for('static', filename='img/IMG_6396.JPG') }}" alt="Mini burgers artesanais Firebull">
+              <img src="/static/img/IMG_6396.JPG" alt="Mini burgers artesanais Firebull">
               <div>
                 <h3>Mini burgers artesanais</h3>
                 <p>Carne fresca, ingredientes selecionados e preparo na hora para servir burgers, bacon, salad, quarter,
@@ -1651,14 +1651,14 @@
               </div>
             </article>
             <article class="buffet-card">
-              <img src="{{ url_for('static', filename='img/pastel e salgado.jpeg') }}" alt="Mini salgados e mini pastéis Firebull">
+              <img src="/static/img/pastel%20e%20salgado.jpeg" alt="Mini salgados e mini pastéis Firebull">
               <div>
                 <h3>Mini salgados e mini pastéis</h3>
                 <p>Coxinha, bolinha de queijo, croquete, risoles de palmito e mini pastéis de queijo e carne.</p>
               </div>
             </article>
             <article class="buffet-card">
-              <img src="{{ url_for('static', filename='img/fries.jpg') }}"
+              <img src="/static/img/fries.jpg"
                 alt="Batata frita Firebull sequinha e crocante">
               <div>
                 <h3>Batata frita</h3>
@@ -1666,7 +1666,7 @@
               </div>
             </article>
             <article class="buffet-card">
-              <img src="{{ url_for('static', filename='img/salada-fresh.jpg') }}"
+              <img src="/static/img/salada-fresh.jpg"
                 alt="Salada fresh Firebull montada em porções individuais">
               <div>
                 <h3>Salada fresh</h3>
@@ -1691,8 +1691,8 @@
         </p>
 
         <div class="event-video">
-          <video src="{{ url_for('static', filename='video/firebull-eventos.mp4') }}"
-            poster="{{ url_for('static', filename='img/firebull-eventos-poster.jpg') }}" preload="metadata" autoplay
+          <video src="/static/video/firebull-eventos.mp4"
+            poster="/static/img/firebull-eventos-poster.jpg" preload="metadata" autoplay
             muted loop playsinline controls aria-label="Vídeo da operação Firebull em eventos"></video>
         </div>
       </div>
@@ -1708,7 +1708,7 @@
         </p>
         <div class="proof-layout">
           <div class="proof-photo">
-            <img src="{{ url_for('static', filename='img/IMG_7132.JPG') }}"
+            <img src="/static/img/IMG_7132.JPG"
               alt="Mini-hambúrgueres e batatas Firebull servidos em evento">
           </div>
           <div class="review-stack">
@@ -1785,7 +1785,7 @@
       <div class="container">
         <div class="cta-card">
           <div class="cta-image">
-            <img src="{{ url_for('static', filename='img/foto.png') }}"
+            <img src="/static/img/foto.png"
               alt="Mini hambúrguer artesanal Firebull">
           </div>
           <div class="form-panel">
@@ -1848,7 +1848,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-brand">
-        <img src="{{ url_for('static', filename='img/firebull-wordmark.svg') }}" alt="Firebull">
+        <img src="/static/img/firebull-wordmark.svg" alt="Firebull">
         <div class="footer-copy">
           <strong>Firebull Burger Eventos</strong>
           <span>Mini-hambúrguer artesanal para celebrações inesquecíveis.</span>
